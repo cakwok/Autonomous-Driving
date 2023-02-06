@@ -1,7 +1,11 @@
 Project overview: This section should contain a brief description of the project and what we are trying to achieve. Why is object detection such an important component of self-driving car systems?
+
+
+Project overview: To understand urban scenes by regressing the presence of pederstrians, vechicles, objects, the modern computer vision approach is to detect objects with bounding box and class label regression.  Object detection is an important component of self-driving car systems to make precise steering decision, ensuring both driver and pedestrian's safety.  
+
 Set up: This section should contain a brief description of the steps to follow to run the code for this repository.
 
-To understand scenes by knowing the presence of pederstrians, vechicles, objects, the model computer vision approach is to detect objects with bounding box and class label regression.  In this project, 
+In this project, I would be training and evaluating the prediction performances of a Yolo network, one of the state-of-the-art framework to detect multiple objects in video frames with the real world autonomous driving dataset collected by Waymo.  Firstly we would be looking into exploratory data analysis, to delve the information the dataset provides.  Secondly I would be sharing comparing and tuning training performance, evaluation performance, analysis on hyperparameters tuning.
 
 Dataset
 Dataset Analysis: This section should contain a quantitative and qualitative description of the dataset. It should include images, charts, and other visualizations.
