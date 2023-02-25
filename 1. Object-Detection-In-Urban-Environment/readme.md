@@ -2,20 +2,33 @@ Project overview: This section should contain a brief description of the project
 
 
 ### Project overview:
-To understand urban scenes by regressing the presence of pederstrians, vechicles, objects, the modern computer vision approach is to detect objects with bounding box and class label regression.  Object detection is an important component of self-driving car systems to make precise steering decision, ensuring both driver and pedestrian's safety.  
+To understand urban scenes by regressing the presence of pederstrians, vechicles, objects, modern computer vision approach such as SSD, Yolo are the current state of the art, commonly deployed to detect objects by bounding box and class label regression.  Object detection is an critical component in self-driving car systems to make precise steering decision to ensure road safety.  
 
 ### Set up: 
 This section should contain a brief description of the steps to follow to run the code for this repository.
 
-In this project, I would be training and evaluating the prediction performances of a Yolo network, one of the state-of-the-art framework to detect multiple objects in video frames with the real world autonomous driving dataset collected by Waymo.  Firstly we would be looking into exploratory data analysis, to delve the information the dataset provides.  Secondly I would be sharing comparing and tuning training performance, evaluation performance, analysis on hyperparameters tuning.
+In this project, I have firstly analysised the Waymo Open Dataset by delving data structure of each frame in the video sequence. I have also evaluated the Tf Object Detection API, to prepare for the setup with a pretrained SSD  network.  Then I conducted a training, and evaluated the prediction performances of the model by TensorBoard, and finally fine tuned the network with data augmentations and hyperparameters experiments.
 
 ### Dataset
 Dataset Analysis: This section should contain a quantitative and qualitative description of the dataset. It should include images, charts, and other visualizations.
+
 Cross-validation: This section should detail the cross-validation strategy and justify your approach.
 Training
 
+#### Dataset Analysis
+, one of the state-of-the-art framework to detect multiple objects in video frames with the real world autonomous driving dataset collected by Waymo.  Firstly we would be looking into exploratory data analysis, to delve the information the dataset provides.  Secondly I would be sharing comparing and tuning training performance, evaluation performance, analysis on hyperparameters tuning.
+
+#### Cross-validation
+
 ### Reference experiment: 
 This section should detail the results of the reference experiment. It should include training metrics, Tensorboard charts, and a detailed explanation of the algorithm's performance.
+
+![image](https://user-images.githubusercontent.com/21034990/221380143-e6e7400f-7773-426a-ab0e-e2c226c94df0.png)<br>
+![image](https://user-images.githubusercontent.com/21034990/221380153-b6b1e8ef-6b9d-46dd-bf15-22b0d2b4fa43.png)<br>
+![image](https://user-images.githubusercontent.com/21034990/221380157-82d80f83-a4f5-460a-9144-e5699ee2774d.png)
+![image](https://user-images.githubusercontent.com/21034990/221380163-87554253-6aae-4040-9ead-27dae359715a.png)
+
+
 
 ### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
