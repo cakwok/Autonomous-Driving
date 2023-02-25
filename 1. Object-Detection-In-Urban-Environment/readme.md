@@ -23,11 +23,10 @@ Training
 ### Reference experiment: 
 This section should detail the results of the reference experiment. It should include training metrics, Tensorboard charts, and a detailed explanation of the algorithm's performance.
 
-![image](https://user-images.githubusercontent.com/21034990/221380143-e6e7400f-7773-426a-ab0e-e2c226c94df0.png)<br>
-![image](https://user-images.githubusercontent.com/21034990/221380153-b6b1e8ef-6b9d-46dd-bf15-22b0d2b4fa43.png)<br>
-![image](https://user-images.githubusercontent.com/21034990/221380157-82d80f83-a4f5-460a-9144-e5699ee2774d.png)
-![image](https://user-images.githubusercontent.com/21034990/221380163-87554253-6aae-4040-9ead-27dae359715a.png)
-
+<img src="https://user-images.githubusercontent.com/21034990/221380143-e6e7400f-7773-426a-ab0e-e2c226c94df0.png" width=400><br>
+<img src="https://user-images.githubusercontent.com/21034990/221380153-b6b1e8ef-6b9d-46dd-bf15-22b0d2b4fa43.png" width=400><br>
+<img src="https://user-images.githubusercontent.com/21034990/221380157-82d80f83-a4f5-460a-9144-e5699ee2774d.png" width=200>
+<img src="https://user-images.githubusercontent.com/21034990/221380163-87554253-6aae-4040-9ead-27dae359715a.png" width=200><br>
 
 
 ### Improve on the reference: 
