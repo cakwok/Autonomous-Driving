@@ -2,7 +2,7 @@ Project overview: This section should contain a brief description of the project
 
 
 ### Project overview:
-The objective of this project is to build a pederstrians, vechicles, object regressing model for autonomous driving systems to understand urban scenes and road conditions.   modern computer vision approach such as SSD, Yolo are the current state of the art, commonly deployed to detect objects by bounding box and class label regression.  Object detection is an critical component in self-driving car systems to make precise steering decision to ensure road safety.  
+The objective of this project is to build a pederstrians, vechicles, object regressing model for autonomous driving systems to understand urban scenes and road conditions.   Object detection is an critical component in self-driving car systems to make precise steering decision to ensure road safety.  SSD is implemented in this project to regress for estimated bounding box and class label.  
 
 ### Set up: 
 This section should contain a brief description of the steps to follow to run the code for this repository.
