@@ -23,17 +23,15 @@ Training
 ### Reference experiment: 
 This section should detail the results of the reference experiment. It should include training metrics, Tensorboard charts, and a detailed explanation of the algorithm's performance.
 
-![image](https://user-images.githubusercontent.com/21034990/221396395-2758214a-a48c-434b-b1a0-036d3aab6735.png)<br>
-![image](https://user-images.githubusercontent.com/21034990/221396403-1282b08a-c6a0-411f-8d4b-ff9fb9fb88d8.png)
-![image](https://user-images.githubusercontent.com/21034990/221396416-3f9a21ef-c12d-4002-9eb2-1739c9a0d799.png)
+![image](https://user-images.githubusercontent.com/21034990/221396833-3fa6ce1d-2237-4972-b18f-b5899de848ac.png)
 
 ### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
 learning rate change from 0.04 to 0.1
-![image](https://user-images.githubusercontent.com/21034990/221390913-ca672dd0-f331-4a98-8095-c97e752d0d2e.png)
-![image](https://user-images.githubusercontent.com/21034990/221390930-cbb4f43f-2daa-4ef7-9623-008c0ec3d9f1.png)
-![image](https://user-images.githubusercontent.com/21034990/221390938-2f91e741-7dcd-4688-ae85-5990fa594ee0.png)
+![image](https://user-images.githubusercontent.com/21034990/221396395-2758214a-a48c-434b-b1a0-036d3aab6735.png)<br>
+![image](https://user-images.githubusercontent.com/21034990/221396403-1282b08a-c6a0-411f-8d4b-ff9fb9fb88d8.png)
+![image](https://user-images.githubusercontent.com/21034990/221396416-3f9a21ef-c12d-4002-9eb2-1739c9a0d799.png)
 
 
 Once you have everything ready and have checked your deliverables against everything in the rubric, you can click the "Submit Project" button on this page.
