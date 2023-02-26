@@ -31,4 +31,11 @@ This section should detail the results of the reference experiment. It should in
 
 ### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
+
+learning rate change from 0.04 to 0.1
+![image](https://user-images.githubusercontent.com/21034990/221390913-ca672dd0-f331-4a98-8095-c97e752d0d2e.png)
+![image](https://user-images.githubusercontent.com/21034990/221390930-cbb4f43f-2daa-4ef7-9623-008c0ec3d9f1.png)
+![image](https://user-images.githubusercontent.com/21034990/221390938-2f91e741-7dcd-4688-ae85-5990fa594ee0.png)
+
+
 Once you have everything ready and have checked your deliverables against everything in the rubric, you can click the "Submit Project" button on this page.
