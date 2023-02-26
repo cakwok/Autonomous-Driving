@@ -4,7 +4,7 @@ The objective of this project is to build a pederstrians, vechicles, object regr
 ### Set up: 
 This section should contain a brief description of the steps to follow to run the code for this repository.
 
-In this project, I have firstly analysised the Waymo Open Dataset by delving data structure of each frame in the video sequence. The result is showed at "Exploratory Data Analysis.ipynb" by running the display_instances() function.  I have also evaluated the Tf Object Detection API, to prepare for the setup with a pretrained SSD  network.  Then I conducted a training, and evaluated the prediction performances of the model by TensorBoard, and finally fine tuned the network with data augmentations and hyperparameters experiments.
+In this project, I have firstly analysised the Waymo Open Dataset by delving data structure of each frame in the video sequence. The result is showed at "Exploratory Data Analysis.ipynb" by running the display_instances() function.  I have also evaluated the Tf Object Detection API, to prepare for the setup with a pretrained SSD  network.  Then I conducted a training, and evaluated the prediction performances of the model by TensorBoard using the API, and finally fine tuned the network with data augmentations and hyperparameters experiments.
 
 ### Dataset
 Dataset Analysis: This section should contain a quantitative and qualitative description of the dataset. It should include images, charts, and other visualizations.
@@ -13,7 +13,9 @@ Cross-validation: This section should detail the cross-validation strategy and j
 Training
 
 #### Dataset Analysis
-Waymo Open Dataset is a real world autonomous driving dataset collected by Waymo.  
+Waymo Open Dataset is composed of a real world autonomous driving images and LiDAR readings collected by Waymo.  In this project, we would be looking into the real time images collected as the training dataset to analysis road conditions, identify vechicles, pedestrians, cyclists, etc.
+
+The dataset is formatted as TFRrecords. TFRrecords a binary format structure, created by protocol buffer for the reason of serialization.
 
 #### Cross-validation
 
@@ -26,10 +28,10 @@ This section should detail the results of the reference experiment. It should in
 ### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
-learning rate change from 0.04 to 0.1
-![image](https://user-images.githubusercontent.com/21034990/221396395-2758214a-a48c-434b-b1a0-036d3aab6735.png)<br>
-![image](https://user-images.githubusercontent.com/21034990/221396403-1282b08a-c6a0-411f-8d4b-ff9fb9fb88d8.png)
-![image](https://user-images.githubusercontent.com/21034990/221396416-3f9a21ef-c12d-4002-9eb2-1739c9a0d799.png)
+Image Augumentation
+![image](https://user-images.githubusercontent.com/21034990/221432614-13a1275e-eecb-445f-9191-b612743a973a.png)br>
+![image](https://user-images.githubusercontent.com/21034990/221432629-f294a980-374d-4a98-9108-4d83bf4e5c49.png)
+![image](https://user-images.githubusercontent.com/21034990/221432530-edee2ef9-ca2a-4bad-9616-3b00d3a0ca1e.png)<br>
 
 
 Once you have everything ready and have checked your deliverables against everything in the rubric, you can click the "Submit Project" button on this page.
