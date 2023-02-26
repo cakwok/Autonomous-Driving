@@ -21,8 +21,9 @@ The dataset is formatted as TFRrecords. TFRrecords a binary format structure, cr
 
 ### Reference experiment: 
 This section should detail the results of the reference experiment. It should include training metrics, Tensorboard charts, and a detailed explanation of the algorithm's performance.
-![image](https://user-images.githubusercontent.com/21034990/221397452-c12e2917-ca92-4f78-95e3-539695696ea3.png)<br>
-![image](https://user-images.githubusercontent.com/21034990/221397412-134acef8-e87e-4612-9021-f0020ec6e693.png)![image](https://user-images.githubusercontent.com/21034990/221397417-d4841291-4dc6-409f-abcc-478a636f6b26.png)
+![image](https://user-images.githubusercontent.com/21034990/221432808-0e4f55cf-5abc-47fa-b2c0-db6f15de3c92.png)<br>
+![image](https://user-images.githubusercontent.com/21034990/221432815-e2771264-5198-4370-9cf7-0f5031ff4dc0.png)
+![image](https://user-images.githubusercontent.com/21034990/221432824-caf40457-bfad-4371-9684-060cc76626af.png)<br>
 
 
 ### Improve on the reference: 
