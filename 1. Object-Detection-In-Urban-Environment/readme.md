@@ -2,9 +2,9 @@
 The objective of this project is to build a pederstrians, vechicles, object regressing model for autonomous driving systems to understand urban scenes and road conditions.   Object detection is an critical component in self-driving car systems to make precise steering decision to ensure road safety.  SSD is implemented in this project to regress for estimated bounding box and class label.  
 
 ### Set up: 
-This section should contain a brief description of the steps to follow to run the code for this repository.
+This section contains a brief description of the steps to follow to run the code for this repository.
 
-To run the code for this repository, start by analyzing the Dataset by delving data structure of each frame in the video sequence. The result is showed at "Exploratory Data Analysis.ipynb" by running the display_instances() function.  
+Start by analyzing the dataset by looking into the data structure of each frame in the video sequence. The result is showed at "Exploratory Data Analysis.ipynb" by running the display_instances() function.  
 
 Prepare the setup by loading a pretrained SSD network by the Tf Object Detection API.
 
