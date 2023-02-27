@@ -6,29 +6,29 @@ This section should contain a brief description of the steps to follow to run th
 
 To run the code for this repository, start by analyzing the Dataset by delving data structure of each frame in the video sequence. The result is showed at "Exploratory Data Analysis.ipynb" by running the display_instances() function.  
 
-Evaluate the Tf Object Detection API, prepare for the setup with a pretrained SSD network.  
+Prepare the setup by loading a pretrained SSD network by the Tf Object Detection API.
 
 ```
 python edit_config.py --train_dir /home/workspace/data/train/ --eval_dir /home/workspace/data/val/ --batch_size 2 --checkpoint /home/workspace/experiments/pretrained_model/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0 --label_map /home/workspace/experiments/label_map.pbtxt
 ```
 
-Train the network with the pipeline_new.config file, which composed of training parameters such as image augumentation, learning rate, etc.
+Train the network using the pipeline_new.config file.  The file defines training parameters such as image augumentation, learning rate, etc.
 ```
 python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config
 ```
 
-Evaluate prediction performances by TensorBoard using the API
+Evaluate prediction performances by exporting event files into TensorBoard
 ```
 python -m tensorboard.main --logdir experiments/reference/
 ```
 
-Evalute inference performance by 
+Evalute inference performance by loading the validation dataset, and peform detection by the learnt weight.
 
 ```
 python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config --checkpoint_dir=experiments/reference/
 ```
 
-Fine tuned the network with data augmentations and hyperparameters experiments.  The effect of data augmentations could be viewed from "Explore augmentations Grayscale.ipynb"
+Fine tune the network with data augmentations and hyperparameters experiments.  The effect of data augmentations could be viewed from "Explore augmentations Grayscale.ipynb"
 
 There is no new requirements.txt file or a Dockerfile, as the project is run in the Udacity provided workspace.
 
