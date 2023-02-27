@@ -4,7 +4,33 @@ The objective of this project is to build a pederstrians, vechicles, object regr
 ### Set up: 
 This section should contain a brief description of the steps to follow to run the code for this repository.
 
-In this project, I have firstly analysised the Waymo Open Dataset by delving data structure of each frame in the video sequence. The result is showed at "Exploratory Data Analysis.ipynb" by running the display_instances() function.  I have also evaluated the Tf Object Detection API, to prepare for the setup with a pretrained SSD  network.  Then I conducted a training, and evaluated the prediction performances of the model by TensorBoard using the API, and finally fine tuned the network with data augmentations and hyperparameters experiments.
+To run the code for this repository, start by analyzing the Dataset by delving data structure of each frame in the video sequence. The result is showed at "Exploratory Data Analysis.ipynb" by running the display_instances() function.  
+
+Evaluate the Tf Object Detection API, prepare for the setup with a pretrained SSD network.  
+
+```
+python edit_config.py --train_dir /home/workspace/data/train/ --eval_dir /home/workspace/data/val/ --batch_size 2 --checkpoint /home/workspace/experiments/pretrained_model/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0 --label_map /home/workspace/experiments/label_map.pbtxt
+```
+
+Train the network with the pipeline_new.config file, which composed of training parameters such as image augumentation, learning rate, etc.
+```
+python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config
+```
+
+Evaluate prediction performances by TensorBoard using the API
+```
+python -m tensorboard.main --logdir experiments/reference/
+```
+
+Evalute inference performance by 
+
+```
+python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config --checkpoint_dir=experiments/reference/
+```
+
+Fine tuned the network with data augmentations and hyperparameters experiments.  The effect of data augmentations could be viewed from "Explore augmentations Grayscale.ipynb"
+
+There is no new requirements.txt file or a Dockerfile, as the project is run in the Udacity provided workspace.
 
 ### Dataset
 Dataset Analysis: This section should contain a quantitative and qualitative description of the dataset. It should include images, charts, and other visualizations.
@@ -18,9 +44,11 @@ Waymo Open Dataset is composed of real world autonomous driving images and LiDAR
 The dataset is formatted as TFRrecords. TFRrecords a binary format structure, created by protocol buffer for serialization, and communicated across platforms, cross-language library by protocol messages defined by .proto files.
 
 #### Cross-validation
+Cross validation is designed for 80/20 split of dataset into training and validation correspondingly.  In this project, the cross-validation dataset is split as 80-20 as per provided by Udacity.
 
 ### Reference experiment: 
 This section should detail the results of the reference experiment. It should include training metrics, Tensorboard charts, and a detailed explanation of the algorithm's performance.
+To set training before tuning as a baseline, a training is conducted with default hyperparameter setting of batch = 2, optimizier = SGD with momentum, data augumentation = random flip horizontal and random crop.  The performance result after performing 2500 steps is recorded as below.
 ![image](https://user-images.githubusercontent.com/21034990/221432808-0e4f55cf-5abc-47fa-b2c0-db6f15de3c92.png)<br>
 ![image](https://user-images.githubusercontent.com/21034990/221432815-e2771264-5198-4370-9cf7-0f5031ff4dc0.png)
 ![image](https://user-images.githubusercontent.com/21034990/221432824-caf40457-bfad-4371-9684-060cc76626af.png)<br>
@@ -29,7 +57,7 @@ This section should detail the results of the reference experiment. It should in
 ### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
-Image Augumentation
+To improve performance of the model, 
 ![image](https://user-images.githubusercontent.com/21034990/221432614-13a1275e-eecb-445f-9191-b612743a973a.png)br>
 ![image](https://user-images.githubusercontent.com/21034990/221432629-f294a980-374d-4a98-9108-4d83bf4e5c49.png)
 ![image](https://user-images.githubusercontent.com/21034990/221432530-edee2ef9-ca2a-4bad-9616-3b00d3a0ca1e.png)<br>
