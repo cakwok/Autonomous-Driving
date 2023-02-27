@@ -15,7 +15,7 @@ Training
 #### Dataset Analysis
 Waymo Open Dataset is composed of real world autonomous driving images and LiDAR readings collected by Waymo in cities such as San Francisco.  In this project, we would be looking into the real time images collected as the training dataset to analysis road conditions, identify vechicles, pedestrians, cyclists, etc.
 
-The dataset is formatted as TFRrecords. TFRrecords a binary format structure, created by protocol buffer for the reason of serialization, and communicate with protocol messages defined by .proto files.
+The dataset is formatted as TFRrecords. TFRrecords a binary format structure, created by protocol buffer for serialization, and communicated across platforms, cross-language library by protocol messages defined by .proto files.
 
 #### Cross-validation
 
