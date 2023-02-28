@@ -58,9 +58,9 @@ To set training before tuning as a baseline, a training is conducted with defaul
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
 To improve performance of the model, 
-![image](https://user-images.githubusercontent.com/21034990/221432614-13a1275e-eecb-445f-9191-b612743a973a.png)br>
-![image](https://user-images.githubusercontent.com/21034990/221432629-f294a980-374d-4a98-9108-4d83bf4e5c49.png)
-![image](https://user-images.githubusercontent.com/21034990/221432530-edee2ef9-ca2a-4bad-9616-3b00d3a0ca1e.png)<br>
+![image](https://user-images.githubusercontent.com/21034990/221735046-a84aef7c-67a2-4585-8ba5-b0e8c56294f5.png)<br>
+![image](https://user-images.githubusercontent.com/21034990/221735095-e34ce549-6c0d-4814-b728-80ce2154ff7b.png)
+![image](https://user-images.githubusercontent.com/21034990/221735120-5309d295-e01e-44ad-be99-8d5f9538cc2b.png)
 
 
 Once you have everything ready and have checked your deliverables against everything in the rubric, you can click the "Submit Project" button on this page.
