@@ -67,6 +67,8 @@ As observed from the result, we can observe that
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
 To improve performance of the model, additional data augmentation 
-![image](https://user-images.githubusercontent.com/21034990/221735046-a84aef7c-67a2-4585-8ba5-b0e8c56294f5.png)<br>
-![image](https://user-images.githubusercontent.com/21034990/221735095-e34ce549-6c0d-4814-b728-80ce2154ff7b.png)
-![image](https://user-images.githubusercontent.com/21034990/221735120-5309d295-e01e-44ad-be99-8d5f9538cc2b.png)
+![image](https://user-images.githubusercontent.com/21034990/222018965-8081865b-554c-4bcd-92cc-ee309a4bdf47.png)<br>
+<img width="343" alt="image" src="https://user-images.githubusercontent.com/21034990/222018992-3f023e46-d827-4c8e-a20e-c47226cbcae2.png"><img width="348" alt="image" src="https://user-images.githubusercontent.com/21034990/222019018-ff226b8d-6e43-4ccd-8f38-83564f7d395c.png">
+
+
+
