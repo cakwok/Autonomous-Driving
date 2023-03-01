@@ -48,7 +48,7 @@ And the distribution of the class labels (identified objects) in 30000 samples. 
 Cross validation is achieved by splitting the dataset into roughly 80/20 for training and validation + testing correspondingly.  80-20 splitting is a general practice in machine learning.  With large enough dataset, we can leverage as much as 95% of the dataset for training while still maintaining promising generalization results. 
 
 ### Training
-### Reference experiment: 
+#### Reference experiment: 
 To set up a baseline to compare training performance, a SSD in Resnet50 trainig result, before any ablation tunings, is recorded as below.   
 
 The training is conducted with default hyperparameter settings of batch = 2, SGD with momentum, learning base rate = 0.04, warmup learning rate = 0.013333, data augumentation = random flip horizontal and random crop.  The performance result after performing 2500 steps is recorded as below.<br>
@@ -63,7 +63,7 @@ As observed from the result, we can observe that
 4.  Regularization loss has not reached a minima as the loss at the later steps is larger than the early steps.
 5.  Total loss ended at around 5 is still high
 
-### Improve on the reference: 
+#### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
 To improve performance of the model, extra data augmentation, random RGB to gray, random adjust contrast are added as one of the image transforms.  The goal is to provide extra varieties of the dataset to better generalise for unseen data.
@@ -78,3 +78,8 @@ Now we can see from the new dashboard, that the losses compared with the baselin
 Samples of new data augmentation - random RGB to gray, random adjust contrast<br>
 <img width="315" alt="image" src="https://user-images.githubusercontent.com/21034990/222091142-87e7f5b4-d8cd-4aea-99ba-be010644bfa6.png">
 <img width="321" alt="image" src="https://user-images.githubusercontent.com/21034990/222091309-f338628a-86c4-4ac3-8d02-77addb754a5b.png">
+
+### Prediction
+Since the video file is too large to be uploaded to github, a snapshot is to taken to demonstrate the prediction.<br>
+![image](https://user-images.githubusercontent.com/21034990/222093132-fd0936fb-5a15-413a-a5fc-0e6fb77d3087.png)
+
