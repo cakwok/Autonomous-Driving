@@ -66,7 +66,9 @@ As observed from the result, we can observe that
 ### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
-To improve performance of the model, additional data augmentation <br>
+To improve performance of the model, additional data augmentation, random RGB to gray, random adjust contrast are added to the image transform.  The goal is to provide extra varieties of the dataset so as to aim for generalising unseen data.
+
+Furthermore, the learning rate base was also changed from 0.04 into 0.0002, warming learning rate changed from 0.013333 to 0.000013333, to prevent having too large step size which skipped local minima.<br><br>
 ![image](https://user-images.githubusercontent.com/21034990/222018965-8081865b-554c-4bcd-92cc-ee309a4bdf47.png)<br>
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/21034990/222018992-3f023e46-d827-4c8e-a20e-c47226cbcae2.png"><img width="250" alt="image" src="https://user-images.githubusercontent.com/21034990/222019018-ff226b8d-6e43-4ccd-8f38-83564f7d395c.png">
 
