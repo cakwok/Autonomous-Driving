@@ -1,5 +1,5 @@
 ### Project overview:
-The objective of this project is to build a pederstrians, vechicles, object regressing model for autonomous driving systems to understand urban scenes and road conditions.   Object detection is an critical component in self-driving car systems to make precise steering decision to ensure road safety.  SSD is implemented in this project to regress for estimated bounding box and class label.  
+The objective of this project is to build a pederstrians, vechicles, object regressing model for autonomous driving systems to understand urban scenes and road conditions.   Object detection is an critical component in self-driving car systems to make precise steering decision to ensure road safety.  Single Shot Detection (SSD) is implemented in this project to regress for estimated bounding box and class label.  
 
 ### Set up: 
 This section contains a brief description of the steps to follow to run the code for this repository.
