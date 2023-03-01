@@ -51,10 +51,10 @@ Cross validation is achieved by splitting the dataset into roughly 80/20 for tra
 ### Reference experiment: 
 To set up a baseline to compare training performance, a SSD in Resnet50 trainig result, before any ablation tunings, is recorded as below.   
 
-The training is conducted with default hyperparameter settings of batch = 2, SGD with momentum, learning base rate = 0.04, warmup learning rate = 0.013333, data augumentation = random flip horizontal and random crop.  The performance result after performing 2500 steps is recorded as below.
+The training is conducted with default hyperparameter settings of batch = 2, SGD with momentum, learning base rate = 0.04, warmup learning rate = 0.013333, data augumentation = random flip horizontal and random crop.  The performance result after performing 2500 steps is recorded as below.<br>
 ![image](https://user-images.githubusercontent.com/21034990/221432808-0e4f55cf-5abc-47fa-b2c0-db6f15de3c92.png)<br>
-![image](https://user-images.githubusercontent.com/21034990/221432815-e2771264-5198-4370-9cf7-0f5031ff4dc0.png)
-![image](https://user-images.githubusercontent.com/21034990/221432824-caf40457-bfad-4371-9684-060cc76626af.png)<br>
+<img src="https://user-images.githubusercontent.com/21034990/221432815-e2771264-5198-4370-9cf7-0f5031ff4dc0.png" width = 250>
+<img src="https://user-images.githubusercontent.com/21034990/221432824-caf40457-bfad-4371-9684-060cc76626af.png" width = 250><br>
 
 As observed from the result, we can observe that 
 1.  Classification loss after the training is around 0.8
@@ -66,9 +66,9 @@ As observed from the result, we can observe that
 ### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
-To improve performance of the model, additional data augmentation 
+To improve performance of the model, additional data augmentation <br>
 ![image](https://user-images.githubusercontent.com/21034990/222018965-8081865b-554c-4bcd-92cc-ee309a4bdf47.png)<br>
-<img width="343" alt="image" src="https://user-images.githubusercontent.com/21034990/222018992-3f023e46-d827-4c8e-a20e-c47226cbcae2.png"><img width="348" alt="image" src="https://user-images.githubusercontent.com/21034990/222019018-ff226b8d-6e43-4ccd-8f38-83564f7d395c.png">
+<img width="250" alt="image" src="https://user-images.githubusercontent.com/21034990/222018992-3f023e46-d827-4c8e-a20e-c47226cbcae2.png"><img width="250" alt="image" src="https://user-images.githubusercontent.com/21034990/222019018-ff226b8d-6e43-4ccd-8f38-83564f7d395c.png">
 
 
 
