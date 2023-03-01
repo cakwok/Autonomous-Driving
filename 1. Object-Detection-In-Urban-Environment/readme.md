@@ -33,11 +33,6 @@ Fine tune the network with data augmentations and hyperparameters experiments.  
 There is no new requirements.txt file or a Dockerfile, as the project is run in the Udacity provided workspace.
 
 ### Dataset
-Dataset Analysis: This section should contain a quantitative and qualitative description of the dataset. It should include images, charts, and other visualizations.
-
-Cross-validation: This section should detail the cross-validation strategy and justify your approach.
-Training
-
 #### Dataset Analysis
 Waymo Open Dataset is composed of real world autonomous driving images and LiDAR readings collected by Waymo in cities such as San Francisco.  In this project, we would be looking into the real time images collected as the training dataset to analysis road conditions, identify vechicles, pedestrians, cyclists, etc.
 
@@ -46,15 +41,13 @@ The dataset is formatted as TFRrecords. TFRrecords a binary format structure, cr
 Below shows some of the samples of the dataset, with corresponding bounding boxes and class label as ground truth -
 <img width="270" alt="image" src="https://user-images.githubusercontent.com/21034990/222014879-098083d0-b608-457f-8f3a-1c75a55dcb78.png"><img width="262" alt="image" src="https://user-images.githubusercontent.com/21034990/222014911-c2c65dca-5445-4b36-8ddd-5aecd0bd349e.png"><img width="265" alt="image" src="https://user-images.githubusercontent.com/21034990/222014927-6beb09af-7174-48b0-864a-895267c9b96a.png"><img width="263" alt="image" src="https://user-images.githubusercontent.com/21034990/222014949-28d3618b-a004-4d88-b7b9-9a345a4456f1.png"><img width="264" alt="image" src="https://user-images.githubusercontent.com/21034990/222015011-ccf0253f-5aea-4c0e-b632-8f72ae4bacf8.png">
 
-And the distribution of the class labels (identified objects).  From the bar chart below, we can identify that there are 3 objects defined in the dataset, namely vechicles, predestrains and cyclists, and most of the detected objects belongs to vechicles.  Most frames have less than 20 objects.<br>
+And the distribution of the class labels (identified objects) in 30000 samples.  From the bar chart below, we can identify that there are 3 objects defined in the dataset, namely vechicles, predestrains and cyclists, and most of the detected objects belongs to vechicles.  Most frames have less than 20 objects.<br><br>
 <img width="429" alt="image" src="https://user-images.githubusercontent.com/21034990/222015203-0cc36ecd-eda2-44ff-b37a-22323ec20aca.png"><br>
 
-
-
-
 #### Cross-validation
-Cross validation is designed for 80/20 split of dataset into training and validation correspondingly.  In this project, the cross-validation dataset is split as 80-20 as per provided by Udacity.
+Cross validation is achieved by splitting the dataset into roughly 80/20 for training and validation + testing correspondingly.  80-20 splitting is a general practice in machine learning.  With large enough dataset, we can leverage as much as 95% of the dataset for training while still maintaining promising generalization results. 
 
+### Training
 ### Reference experiment: 
 This section should detail the results of the reference experiment. It should include training metrics, Tensorboard charts, and a detailed explanation of the algorithm's performance.
 To set training before tuning as a baseline, a training is conducted with default hyperparameter setting of batch = 2, optimizier = SGD with momentum, data augumentation = random flip horizontal and random crop.  The performance result after performing 2500 steps is recorded as below.
