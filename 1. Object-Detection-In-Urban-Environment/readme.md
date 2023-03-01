@@ -49,20 +49,24 @@ Cross validation is achieved by splitting the dataset into roughly 80/20 for tra
 
 ### Training
 ### Reference experiment: 
-This section should detail the results of the reference experiment. It should include training metrics, Tensorboard charts, and a detailed explanation of the algorithm's performance.
-To set training before tuning as a baseline, a training is conducted with default hyperparameter setting of batch = 2, optimizier = SGD with momentum, data augumentation = random flip horizontal and random crop.  The performance result after performing 2500 steps is recorded as below.
+To set up a baseline to compare training performance, a SSD in Resnet50 trainig result, before any ablation tunings, is recorded as below.   
+
+The training is conducted with default hyperparameter settings of batch = 2, SGD with momentum, learning base rate = 0.04, warmup learning rate = 0.013333, data augumentation = random flip horizontal and random crop.  The performance result after performing 2500 steps is recorded as below.
 ![image](https://user-images.githubusercontent.com/21034990/221432808-0e4f55cf-5abc-47fa-b2c0-db6f15de3c92.png)<br>
 ![image](https://user-images.githubusercontent.com/21034990/221432815-e2771264-5198-4370-9cf7-0f5031ff4dc0.png)
 ![image](https://user-images.githubusercontent.com/21034990/221432824-caf40457-bfad-4371-9684-060cc76626af.png)<br>
 
+As observed from the result, we can observe that 
+1.  Classification loss after the training is around 0.8
+2.  Localization loss seems not converging.  at the step 2.3k, the loss achieved is the same as the beginning of the training.
+3.  Normalized total loss ended at around 5 which is still high
+4.  Regularization loss has not reached a minima as the loss at the later steps is larger than the early steps.
+5.  Total loss ended at around 5 is still high
 
 ### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
-To improve performance of the model, 
+To improve performance of the model, additional data augmentation 
 ![image](https://user-images.githubusercontent.com/21034990/221735046-a84aef7c-67a2-4585-8ba5-b0e8c56294f5.png)<br>
 ![image](https://user-images.githubusercontent.com/21034990/221735095-e34ce549-6c0d-4814-b728-80ce2154ff7b.png)
 ![image](https://user-images.githubusercontent.com/21034990/221735120-5309d295-e01e-44ad-be99-8d5f9538cc2b.png)
-
-
-Once you have everything ready and have checked your deliverables against everything in the rubric, you can click the "Submit Project" button on this page.
