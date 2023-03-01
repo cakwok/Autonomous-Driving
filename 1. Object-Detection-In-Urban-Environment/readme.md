@@ -66,11 +66,15 @@ As observed from the result, we can observe that
 ### Improve on the reference: 
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
-To improve performance of the model, additional data augmentation, random RGB to gray, random adjust contrast are added to the image transform.  The goal is to provide extra varieties of the dataset so as to aim for generalising unseen data.
+To improve performance of the model, extra data augmentation, random RGB to gray, random adjust contrast are added as one of the image transforms.  The goal is to provide extra varieties of the dataset to better generalise for unseen data.
 
-Furthermore, the learning rate base was also changed from 0.04 into 0.0002, warming learning rate changed from 0.013333 to 0.000013333, to prevent having too large step size which skipped local minima.<br><br>
+Furthermore, the learning rate base has been changed from 0.04 into 0.0002, warming learning rate changed from 0.013333 to 0.000013333, to prevent large step which may have skipped the local minima.
+
+Now we can see from the new dashboard, that the losses compared with the baseline has significantly improved in terms of both magitude, and clear trends of the 5 losses keep on decreasing for further steps. 
+<br><br>
 ![image](https://user-images.githubusercontent.com/21034990/222018965-8081865b-554c-4bcd-92cc-ee309a4bdf47.png)<br>
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/21034990/222018992-3f023e46-d827-4c8e-a20e-c47226cbcae2.png"><img width="250" alt="image" src="https://user-images.githubusercontent.com/21034990/222019018-ff226b8d-6e43-4ccd-8f38-83564f7d395c.png">
 
-
-
+Samples of new data augmentation - random RGB to gray, random adjust contrast<br>
+<img width="315" alt="image" src="https://user-images.githubusercontent.com/21034990/222091142-87e7f5b4-d8cd-4aea-99ba-be010644bfa6.png">
+<img width="321" alt="image" src="https://user-images.githubusercontent.com/21034990/222091309-f338628a-86c4-4ac3-8d02-77addb754a5b.png">
