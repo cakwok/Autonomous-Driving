@@ -43,9 +43,11 @@ Waymo Open Dataset is composed of real world autonomous driving images and LiDAR
 
 The dataset is formatted as TFRrecords. TFRrecords a binary format structure, created by protocol buffer for serialization and communication across platforms and language libraries by protocol messages, which is defined by .proto files.
 
-Below shows some of the samples of the dataset, with corresponding bounding boxes as ground truth -
+Below shows some of the samples of the dataset, with corresponding bounding boxes and class label as ground truth -
 <img width="270" alt="image" src="https://user-images.githubusercontent.com/21034990/222014879-098083d0-b608-457f-8f3a-1c75a55dcb78.png"><img width="262" alt="image" src="https://user-images.githubusercontent.com/21034990/222014911-c2c65dca-5445-4b36-8ddd-5aecd0bd349e.png"><img width="265" alt="image" src="https://user-images.githubusercontent.com/21034990/222014927-6beb09af-7174-48b0-864a-895267c9b96a.png"><img width="263" alt="image" src="https://user-images.githubusercontent.com/21034990/222014949-28d3618b-a004-4d88-b7b9-9a345a4456f1.png"><img width="264" alt="image" src="https://user-images.githubusercontent.com/21034990/222015011-ccf0253f-5aea-4c0e-b632-8f72ae4bacf8.png">
 
+And the distribution of the class labels (identified objects).  From the bar chart below, we can identify that there are 3 objects defined in the dataset, namely vechicles, predestrains and cyclists, and most of the detected objects belongs to vechicles.  Most frames have less than 20 objects.<br>
+<img width="429" alt="image" src="https://user-images.githubusercontent.com/21034990/222015203-0cc36ecd-eda2-44ff-b37a-22323ec20aca.png"><br>
 
 
 
