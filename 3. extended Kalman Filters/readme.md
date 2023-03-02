@@ -12,19 +12,19 @@ Measurement readings from sensors such as LiDAR or camera are expected to come w
 
 In order to estimate velocity of a detected vehicle or pedestrian of the next timestamp, we firstly define the estimated state x as follows, where Px represents position x, Vx represents velocity x, and likewise for the y direction.
 
-<img src="https://user-images.githubusercontent.com/21034990/222509524-e55b22e9-8e37-4676-91bb-01f5275db989.png" width = 200>
+<img src="https://user-images.githubusercontent.com/21034990/222509524-e55b22e9-8e37-4676-91bb-01f5275db989.png" width = 100>
   
 Since distance can infer velocity over time t, Pxt = Pxt-1 + delta time * Vx, Vxt = Vxt-1 + Vxt, we arrive at a state matrix F, and x of the predicted next state becomes 
 
-<img src="https://user-images.githubusercontent.com/21034990/222509563-1ae4d747-2460-47fb-99e0-5ec90fc6c9bb.png" width = 200>
+<img src="https://user-images.githubusercontent.com/21034990/222509563-1ae4d747-2460-47fb-99e0-5ec90fc6c9bb.png" width = 300>
 
 and takes stochastic noises/errors/acceleration into consideration, it comes up covariance matrix Q.  The smaller the covariance, the higher confidence of the model.
 
-<img src="https://user-images.githubusercontent.com/21034990/222509952-8f2fb1ac-2709-4cf1-80c8-fc4c0b3bfb9d.png" width = 400>
+<img src="https://user-images.githubusercontent.com/21034990/222509952-8f2fb1ac-2709-4cf1-80c8-fc4c0b3bfb9d.png" width = 300>
 
 and approximating Q over time, Q becomes
 
-<img src="https://user-images.githubusercontent.com/21034990/222510111-ecc2ae1b-8415-4fcd-92bf-b9454988420c.png" width = 500>
+<img src="https://user-images.githubusercontent.com/21034990/222510111-ecc2ae1b-8415-4fcd-92bf-b9454988420c.png" width = 600>
 
 So the predict step has become
 
