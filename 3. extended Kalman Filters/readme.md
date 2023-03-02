@@ -12,27 +12,25 @@ Measurement readings from sensors such as LiDAR or camera are expected to come w
 
 In order to estimate velocity of a detected vehicle or pedestrian of the next timestamp, we firstly define the estimated state x as follows, where Px represents position x, Vx represents velocity x, and likewise for the y direction.
 
-![image](https://user-images.githubusercontent.com/21034990/222509524-e55b22e9-8e37-4676-91bb-01f5275db989.png)
+<img src="https://user-images.githubusercontent.com/21034990/222509524-e55b22e9-8e37-4676-91bb-01f5275db989.png" width = 200>
   
 Since distance can infer velocity over time t, Pxt = Pxt-1 + delta time * Vx, Vxt = Vxt-1 + Vxt, we arrive at a state matrix F, and x of the predicted next state becomes 
 
-![image](https://user-images.githubusercontent.com/21034990/222509563-1ae4d747-2460-47fb-99e0-5ec90fc6c9bb.png)
+<img src="https://user-images.githubusercontent.com/21034990/222509563-1ae4d747-2460-47fb-99e0-5ec90fc6c9bb.png" width = 200>
 
 and takes stochastic noises/errors/acceleration into consideration, it comes up covariance matrix Q.  The smaller the covariance, the higher confidence of the model.
 
-![image](https://user-images.githubusercontent.com/21034990/222509952-8f2fb1ac-2709-4cf1-80c8-fc4c0b3bfb9d.png)
+<img src="https://user-images.githubusercontent.com/21034990/222509952-8f2fb1ac-2709-4cf1-80c8-fc4c0b3bfb9d.png" width = 300>
 
 and approximating Q over time, Q becomes
 
-![image](https://user-images.githubusercontent.com/21034990/222510111-ecc2ae1b-8415-4fcd-92bf-b9454988420c.png)
+<img src="https://user-images.githubusercontent.com/21034990/222510111-ecc2ae1b-8415-4fcd-92bf-b9454988420c.png" width = 400>
 
 So the predict step has become
 
 xt = F * xt-1
 
 noise Pt = F * Pt-1 * FT + Q.
-
-
 
 Next step is to update the model/prediction with actual measurement. 
 
@@ -58,4 +56,5 @@ Results:
 
 Below shows an animated plot of 3 states per loop - the estimated state (Vx and Vy position), simulated measurement reading with random noise added, and simulated measurement reading of ground truth.  We can see from the result that the predictions lie very closely with measurement.
 
-![image](https://user-images.githubusercontent.com/21034990/222510357-fea6c08d-6eb5-4d27-99b1-02a8a3fd1934.png)
+![image](https://user-images.githubusercontent.com/21034990/222510357-fea6c08d-6eb5-4d27-99b1-02a8a3fd1934.png)![image](https://user-images.githubusercontent.com/21034990/222510515-3a228ff8-5429-4cab-bae5-c29928292589.png)
+
