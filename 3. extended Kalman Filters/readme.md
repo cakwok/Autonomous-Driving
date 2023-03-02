@@ -50,11 +50,8 @@ Eq4: x = x + K * y                    Update x.  The higher the Kalman gain, the
 
 Eq5: P = (identity matrix - K * H) * P           Update P, the process covariance weighted by Kalman gain, by (1 - KH) * P
 
-
-
-Results: 
+### Results: 
 
 Below shows an animated plot of 3 states per loop - the estimated state (Vx and Vy position), simulated measurement reading with random noise added, and simulated measurement reading of ground truth.  We can see from the result that the predictions lie very closely with measurement.
 
 <img src="https://user-images.githubusercontent.com/21034990/222510357-fea6c08d-6eb5-4d27-99b1-02a8a3fd1934.png" width=450><img src="https://user-images.githubusercontent.com/21034990/222510515-3a228ff8-5429-4cab-bae5-c29928292589.png" width=450>
-
