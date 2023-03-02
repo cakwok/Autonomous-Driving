@@ -16,7 +16,7 @@ In order to estimate velocity of a detected vehicle or pedestrian of the next ti
   
 Since distance can infer velocity over time t, Pxt = Pxt-1 + delta time * Vx, Vxt = Vxt-1 + Vxt, we arrive at a state matrix F, and x of the predicted next state becomes 
 
-<img src="https://user-images.githubusercontent.com/21034990/222509563-1ae4d747-2460-47fb-99e0-5ec90fc6c9bb.png" width = 200>
+<img src="https://user-images.githubusercontent.com/21034990/222509563-1ae4d747-2460-47fb-99e0-5ec90fc6c9bb.png" width = 250>
 
 and takes stochastic noises/errors/acceleration into consideration, it comes up covariance matrix Q.  The smaller the covariance, the higher confidence of the model.
 
@@ -36,7 +36,7 @@ Next step is to update the model/prediction with actual measurement.
 
 Measurement in this context is the readings from LiDAR, which provides the value of Px and Py in 2 dimensional fashion with no velocity information, so now we define a H matrix to carry these Px Py location values 
 
-![image](https://user-images.githubusercontent.com/21034990/222510182-1dd58a6d-0aad-4097-946c-30448dab37a5.png)
+<img src="https://user-images.githubusercontent.com/21034990/222510182-1dd58a6d-0aad-4097-946c-30448dab37a5.png" width = 200>
 
 The update step would then become
 
@@ -56,5 +56,5 @@ Results:
 
 Below shows an animated plot of 3 states per loop - the estimated state (Vx and Vy position), simulated measurement reading with random noise added, and simulated measurement reading of ground truth.  We can see from the result that the predictions lie very closely with measurement.
 
-<img src="https://user-images.githubusercontent.com/21034990/222510357-fea6c08d-6eb5-4d27-99b1-02a8a3fd1934.png" width=400><img src="https://user-images.githubusercontent.com/21034990/222510515-3a228ff8-5429-4cab-bae5-c29928292589.png" width=400>
+<img src="https://user-images.githubusercontent.com/21034990/222510357-fea6c08d-6eb5-4d27-99b1-02a8a3fd1934.png" width=450><img src="https://user-images.githubusercontent.com/21034990/222510515-3a228ff8-5429-4cab-bae5-c29928292589.png" width=450>
 
