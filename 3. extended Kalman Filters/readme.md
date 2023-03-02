@@ -20,11 +20,11 @@ Since distance can infer velocity over time t, Pxt = Pxt-1 + delta time * Vx, Vx
 
 and takes stochastic noises/errors/acceleration into consideration, it comes up covariance matrix Q.  The smaller the covariance, the higher confidence of the model.
 
-<img src="https://user-images.githubusercontent.com/21034990/222509952-8f2fb1ac-2709-4cf1-80c8-fc4c0b3bfb9d.png" width = 300>
+<img src="https://user-images.githubusercontent.com/21034990/222509952-8f2fb1ac-2709-4cf1-80c8-fc4c0b3bfb9d.png" width = 400>
 
 and approximating Q over time, Q becomes
 
-<img src="https://user-images.githubusercontent.com/21034990/222510111-ecc2ae1b-8415-4fcd-92bf-b9454988420c.png" width = 400>
+<img src="https://user-images.githubusercontent.com/21034990/222510111-ecc2ae1b-8415-4fcd-92bf-b9454988420c.png" width = 500>
 
 So the predict step has become
 
@@ -56,5 +56,5 @@ Results:
 
 Below shows an animated plot of 3 states per loop - the estimated state (Vx and Vy position), simulated measurement reading with random noise added, and simulated measurement reading of ground truth.  We can see from the result that the predictions lie very closely with measurement.
 
-![image](https://user-images.githubusercontent.com/21034990/222510357-fea6c08d-6eb5-4d27-99b1-02a8a3fd1934.png)![image](https://user-images.githubusercontent.com/21034990/222510515-3a228ff8-5429-4cab-bae5-c29928292589.png)
+<img src="https://user-images.githubusercontent.com/21034990/222510357-fea6c08d-6eb5-4d27-99b1-02a8a3fd1934.png" width=300><img src="https://user-images.githubusercontent.com/21034990/222510515-3a228ff8-5429-4cab-bae5-c29928292589.png" width=300>
 
