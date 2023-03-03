@@ -8,7 +8,7 @@ From this image, we can see the range channel(above) and intensity channel(below
 
 #### Visualize point-cloud
 ![image](https://user-images.githubusercontent.com/21034990/222808102-bc506df9-f863-4832-8f6b-085027f0bb19.png)
-![image](https://user-images.githubusercontent.com/21034990/222801461-22a7ad87-b36a-44c6-a13c-bb6709fda3dd.png)
-![image](https://user-images.githubusercontent.com/21034990/222801519-2837219f-eca1-4c08-a92b-7062617ac1ef.png)
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/21034990/222811986-c5192314-af07-4856-b8df-043daf9fe7cb.png">
+<img width="1109" alt="image" src="https://user-images.githubusercontent.com/21034990/222816312-5e6e7c4f-8e00-4ee9-bdb5-cf16a3216a85.png">
 
 
