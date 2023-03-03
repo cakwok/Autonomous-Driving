@@ -13,7 +13,8 @@ Below shows the RGB image captured by the front camera, with the corresponding p
 
 ![image](https://user-images.githubusercontent.com/21034990/222808102-bc506df9-f863-4832-8f6b-085027f0bb19.png)
 <img width="1109" alt="image" src="https://user-images.githubusercontent.com/21034990/222811986-c5192314-af07-4856-b8df-043daf9fe7cb.png">
-<img width="1260" alt="image" src="https://user-images.githubusercontent.com/21034990/222816312-5e6e7c4f-8e00-4ee9-bdb5-cf16a3216a85.png">
+<img width="1460" alt="image" src="https://user-images.githubusercontent.com/21034990/222816312-5e6e7c4f-8e00-4ee9-bdb5-cf16a3216a85.png">
 
 Some common vehicle features that appear as stable features on most vehicles are rear bumper, tailights, side mirrors.  Using range images, we can confirm the presence of these features on most vehicles by examining the lidar intensity channel. The rear-bumper and taillights appear as bright, reflective surfaces with high intensity values, while the side mirrors appear as smaller, reflective surfaces with lower intensity values.
+<br><br>
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/21034990/222823816-42f20ac8-2021-4c37-a2df-cd12f53c0878.png">
