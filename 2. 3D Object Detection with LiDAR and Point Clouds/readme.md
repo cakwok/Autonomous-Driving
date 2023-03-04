@@ -3,14 +3,16 @@
 ### Compute Lidar Point-Cloud from Range Image
 
 #### Visualize range image channels
-In the Waymo Open dataset, lidar data is stored as a range image. The image below is about extracting two of the data channels, range and intensity, from the range image, and illustrated by stacking the range channel(above) and intensity channel(below).
+In the Waymo Open dataset, lidar data is stored as a range image. In a 64 x 2650 x 4 array, each cell represents range, intensity and other readings.  The image below is about extracting two of the data channels, range and intensity, and illustrated by stacking the range channel(above) and intensity channel(below).
 
 ![image](https://user-images.githubusercontent.com/21034990/222597886-9228ce0b-5dff-4f47-87f0-b39453473af6.png)
 
 #### Visualize point-cloud by Open3D
-Another way to visualize point clouds is to view them by Open3D.  In Open3D, a rainbow color map maps scalar values to colors. Low scalar values are mapped to red, intermediate scalar values are mapped to green, and high scalar values are mapped to blue. 
+To project range image into 3D point clouds, compute the 3D sensor coordinates by the inclination, azimuth angles and range at each cell, then calibrate the results with extrinsic parameters to transform to vehicle corrdinates.  
 
-At the same timestamp, the Waymo Dataset provides both the RGB image captured by the front camera, and the corresponding point clouds captured by LiDAR.  The illustrations below shows also the examples of vehicles with varying degree of visiblility -
+In Open3D, a rainbow color map maps scalar values to colors. Low scalar values are mapped to red, intermediate scalar values are mapped to green, and high scalar values are mapped to blue. 
+
+The illustrations below shows also the examples of vehicles with varying degree of visiblility -
 
 ![image](https://user-images.githubusercontent.com/21034990/222808102-bc506df9-f863-4832-8f6b-085027f0bb19.png)
 <img width="1109" alt="image" src="https://user-images.githubusercontent.com/21034990/222811986-c5192314-af07-4856-b8df-043daf9fe7cb.png">
