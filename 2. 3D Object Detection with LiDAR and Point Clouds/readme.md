@@ -8,11 +8,11 @@ In the Waymo Open dataset, lidar data is stored as a range image. In a 64 x 2650
 ![image](https://user-images.githubusercontent.com/21034990/222597886-9228ce0b-5dff-4f47-87f0-b39453473af6.png)
 
 #### Visualize point-cloud by Open3D
-To project range image into 3D point clouds, compute the 3D sensor coordinates by the inclination, azimuth angles and range at each cell, then calibrate the results with extrinsic parameters to transform to vehicle corrdinates.  
+To project range image into 3D point clouds, compute the 3D sensor coordinates using the inclination, azimuth angles and range at each cell, then calibrate the results with extrinsic parameters and transform this sensor coordinates into vehicle corrdinates.  
 
-In Open3D, a rainbow color map maps scalar values to colors. Low scalar values are mapped to red, intermediate scalar values are mapped to green, and high scalar values are mapped to blue. 
+To visualize the point clouds, Open3D uses a rainbow color map to map the vehicle z coordinates into colors. Low values are mapped to blue, intermediate values are mapped to green, and high values are mapped to red. 
 
-The illustrations below shows also the examples of vehicles with varying degree of visiblility -
+The illustrations below shows the examples of 3D point clouds, and demonstrates vehicles with varying degree of visiblility -
 
 ![image](https://user-images.githubusercontent.com/21034990/222808102-bc506df9-f863-4832-8f6b-085027f0bb19.png)
 <img width="1109" alt="image" src="https://user-images.githubusercontent.com/21034990/222811986-c5192314-af07-4856-b8df-043daf9fe7cb.png">
