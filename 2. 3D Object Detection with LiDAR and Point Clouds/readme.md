@@ -27,5 +27,4 @@ Some common vehicle features that appear as stable features on most vehicles are
 ### Convert sensor coordinates to bev-map coordinates
 <img width="737" alt="image" src="https://user-images.githubusercontent.com/21034990/222883919-5c95a432-26b7-4913-a880-cf48d55b3d34.png">
 
-![image](https://user-images.githubusercontent.com/21034990/222884490-a614bd52-6e05-4445-8400-6bc13d54cd1a.png)
-
+![image](https://user-images.githubusercontent.com/21034990/222884513-0b237d40-1135-411d-8f57-fbc93ee3f237.png)
