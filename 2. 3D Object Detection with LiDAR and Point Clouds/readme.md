@@ -1,13 +1,13 @@
-## 3D Object Detection with LiDAR and Point Clouds(Constructing)
+# 3D Object Detection with LiDAR and Point Clouds(Constructing)
 
-### Compute Lidar Point-Cloud from Range Image
+## Compute Lidar Point-Cloud from Range Image
 
-#### Visualize range image channels
+### Visualize range image channels
 In the Waymo Open dataset, lidar data is stored as a range image. In a 64 x 2650 x 4 array, each cell represents range, intensity and other readings.  The image below is about extracting two of the data channels, range and intensity, and illustrated by stacking the range channel(above) and intensity channel(below).
 
 ![image](https://user-images.githubusercontent.com/21034990/222597886-9228ce0b-5dff-4f47-87f0-b39453473af6.png)
 
-#### Visualize point-cloud by Open3D
+### Visualize point-cloud by Open3D
 To project range image into 3D point clouds, compute the 3D sensor coordinates using the inclination, azimuth angles and range at each cell, then calibrate the results with extrinsic parameters and transform this sensor coordinates into vehicle corrdinates.  
 
 To visualize the point clouds, Open3D uses a rainbow color map to map the vehicle z coordinates into colors. Low values are mapped to blue, intermediate values are mapped to green, and high values are mapped to red. 
@@ -21,3 +21,8 @@ The illustrations below shows the examples of 3D point clouds, and demonstrates 
 Some common vehicle features that appear as stable features on most vehicles are rear bumper, tailights, side mirrors.  Using range images, we can confirm the presence of these features on most vehicles by examining the lidar intensity channel. The rear-bumper and taillights appear as bright, reflective surfaces with high intensity values, while the side mirrors appear as smaller, reflective surfaces with lower intensity values.
 <br><br>
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/21034990/222823816-42f20ac8-2021-4c37-a2df-cd12f53c0878.png">
+
+## Create Birds-Eye View from Lidar PCL
+
+### Convert sensor coordinates to bev-map coordinates
+<img width="737" alt="image" src="https://user-images.githubusercontent.com/21034990/222883919-5c95a432-26b7-4913-a880-cf48d55b3d34.png">
