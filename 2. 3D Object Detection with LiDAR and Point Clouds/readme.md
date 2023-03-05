@@ -25,9 +25,7 @@ Some common vehicle features that appear as stable features on most vehicles are
 ## Create Birds-Eye View from Lidar PCL
 
 ### Convert sensor coordinates to bev-map coordinates
-<img width="737" alt="image" src="https://user-images.githubusercontent.com/21034990/222883919-5c95a432-26b7-4913-a880-cf48d55b3d34.png">
-
-<img src="https://user-images.githubusercontent.com/21034990/222884513-0b237d40-1135-411d-8f57-fbc93ee3f237.png width=300>
+<img src="https://user-images.githubusercontent.com/21034990/222884513-0b237d40-1135-411d-8f57-fbc93ee3f237.png" width=300>
 
 ### Compute intensity layer of the BEV map
 <img src="https://user-images.githubusercontent.com/21034990/222939721-e4e4c987-a235-427b-a229-e58b484fa5f5.png" width=300>
