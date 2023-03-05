@@ -29,7 +29,6 @@ from tools.objdet_models.resnet.utils.evaluation_utils import decode, post_proce
 from tools.objdet_models.darknet.models.darknet2pytorch import Darknet as darknet
 from tools.objdet_models.darknet.utils.evaluation_utils import post_processing_v2
 
-
 # load model-related parameters into an edict
 def load_configs_model(model_name='darknet', configs=None):
 
@@ -65,7 +64,7 @@ def load_configs_model(model_name='darknet', configs=None):
         configs.model_path = os.path.join(parent_path, 'tools', 'objdet_models', 'resnet')
         configs.pretrained_filename = os.path.join(configs.model_path, 'pretrained', 'fpn_resnet_18_epoch_300.pth')
         configs.arch = 'fpn_resnet'
-        configs.k = 50
+        configs.K = 50
         configs.conf_thresh = 0.5
         configs.no_cuda = False
         configs.gpu_idx = 0
@@ -172,7 +171,10 @@ def create_model(configs):
 
 # detect trained objects in birds-eye view
 def detect_objects(input_bev_maps, model, configs):
-
+    
+    def _sigmoid(x):
+        return torch.clamp(x.sigmoid_(), min=1e-4, max=1 - 1e-4)
+    
     # deactivate autograd engine during test to reduce memory usage and speed up computations
     with torch.no_grad():  
 
@@ -206,7 +208,8 @@ def detect_objects(input_bev_maps, model, configs):
             
             detections = decode(outputs['hm_cen'], outputs['cen_offset'], outputs['direction'], outputs['z_coor'], outputs['dim'], K=configs.K)
             detections = detections.cpu().numpy().astype(np.float32)
-            detections = post_processing(detections, configs)          
+            detections = post_processing(detections, configs)
+            detections = detections[0][1]
             #######
             ####### ID_S3_EX1-5 END #######     
 
@@ -220,14 +223,13 @@ def detect_objects(input_bev_maps, model, configs):
 
     ## step 1 : check whether there are any detections
     for obj in detections:
+        id, bev_x, bev_y, z, h, bev_w, bev_l, yaw = obj
         
         ## step 2 : loop over all detections
-        _id, _x, _y, _z, _h, _w, _l, _yaw = obj
-        x = _y / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
-        y = _x / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0]) - (configs.lim_y[1] - configs.lim_y[0])/2.0 
-        z = _z 
-        w = _w / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0]) 
-        l = _l / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
+        x = bev_y / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
+        y = bev_x / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0]) - (configs.lim_y[1] - configs.lim_y[0])/2.0 
+        w = bev_w / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0]) 
+        l = bev_l / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
         
         ## step 3 : perform the conversion using the limits for x, y and z set in the configs structure
         if ((x >= configs.lim_x[0]) and (x <= configs.lim_x[1])
@@ -235,7 +237,7 @@ def detect_objects(input_bev_maps, model, configs):
             and (z >= configs.lim_z[0]) and (z <= configs.lim_z[1])):
                 
         ## step 4 : append the current object to the 'objects' array
-            objects.append([1, x, y, z, _h, w, l, _yaw])
+            objects.append([1, x, y, z, h, w, l, yaw])
         
     #######
     ####### ID_S3_EX2 START #######   
