@@ -30,5 +30,4 @@ Some common vehicle features that appear as stable features on most vehicles are
 ![image](https://user-images.githubusercontent.com/21034990/222884513-0b237d40-1135-411d-8f57-fbc93ee3f237.png)
 
 ### Compute intensity layer of the BEV map
-![image](https://user-images.githubusercontent.com/21034990/222938923-c9ee161b-5ddc-4168-9a33-96cf87d2b023.png)
-
+![image](https://user-images.githubusercontent.com/21034990/222939721-e4e4c987-a235-427b-a229-e58b484fa5f5.png)
