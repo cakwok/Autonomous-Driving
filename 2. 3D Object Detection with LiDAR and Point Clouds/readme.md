@@ -32,8 +32,12 @@ Base on the metric coordinates in sensor space, this task prepare the stage for 
 ### Compute intensity layer & height layer of the BEV map
 Each channel of a BEV image represent one dimension of information, collectively height, intensity, density.  It works similarly like a RGB image, but instead of RGB color space, the colors in BEV images represent different information.
 
-Intensity layer(left) represents the intensity of lidar signal return, whereas height layer(right) represents the z coordinates, or height of an object.
+Intensity layer(left) represents the intensity of lidar signal return, whereas height layer(right) represents the z coordinates, or height of an object.<br>
 <img src="https://user-images.githubusercontent.com/21034990/222941797-1259f20e-ec4a-4573-b002-9c22a2879f33.png" width=500>
 <img src="https://user-images.githubusercontent.com/21034990/222941743-0a102c19-4ec6-4203-a76f-a8c6a1694461.png" width=500>
 
+## Extract 3D bounding boxes from SFA3D model
 ![image](https://user-images.githubusercontent.com/21034990/222950631-3ffa2a60-1bbd-4a43-aefa-ef73e90763fd.png)
+
+
+
