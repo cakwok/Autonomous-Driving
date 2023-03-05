@@ -32,3 +32,5 @@ Some common vehicle features that appear as stable features on most vehicles are
 
 ### Compute height layer of the BEV map
 <img src="https://user-images.githubusercontent.com/21034990/222941743-0a102c19-4ec6-4203-a76f-a8c6a1694461.png" width=600>
+
+![image](https://user-images.githubusercontent.com/21034990/222950631-3ffa2a60-1bbd-4a43-aefa-ef73e90763fd.png)
