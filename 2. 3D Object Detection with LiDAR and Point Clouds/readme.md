@@ -23,14 +23,17 @@ Some common vehicle features that appear as stable features on most vehicles are
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/21034990/222823816-42f20ac8-2021-4c37-a2df-cd12f53c0878.png">
 
 ## Create Birds-Eye View from Lidar PCL
+Lidar point clouds are an unstructured data points which are distributed unevenly over the measurement range. The nature has imposed challenges from efficient deep network trainings.  Projection based representation, such as BEV projection, is one of the common approaches to represent point clouds into deep network.
 
 ### Convert sensor coordinates to bev-map coordinates
+Base on the metric coordinates in sensor space, this task prepare the stage for 3D object detection by converting the coordinates into BEV image coordinates. <br><br>
 <img src="https://user-images.githubusercontent.com/21034990/222884513-0b237d40-1135-411d-8f57-fbc93ee3f237.png" width=300>
 
-### Compute intensity layer of the BEV map
-<img src="https://user-images.githubusercontent.com/21034990/222941797-1259f20e-ec4a-4573-b002-9c22a2879f33.png" width=600>
+### Compute intensity layer & height layer of the BEV map
+Each channel of a BEV image represent one dimension of information, collectively height, intensity, density.  It works similarly like a RGB image, but instead of RGB color space, the colors in BEV images represent different information.
 
-### Compute height layer of the BEV map
-<img src="https://user-images.githubusercontent.com/21034990/222941743-0a102c19-4ec6-4203-a76f-a8c6a1694461.png" width=600>
+Intensity layer(left) represents the intensity of lidar signal return, whereas height layer(right) represents the z coordinates, or height of an object.
+<img src="https://user-images.githubusercontent.com/21034990/222941797-1259f20e-ec4a-4573-b002-9c22a2879f33.png" width=500>
+<img src="https://user-images.githubusercontent.com/21034990/222941743-0a102c19-4ec6-4203-a76f-a8c6a1694461.png" width=500>
 
 ![image](https://user-images.githubusercontent.com/21034990/222950631-3ffa2a60-1bbd-4a43-aefa-ef73e90763fd.png)
