@@ -39,5 +39,8 @@ Intensity layer(left) represents the intensity of lidar signal return, whereas h
 ## Extract 3D bounding boxes from SFA3D model
 ![image](https://user-images.githubusercontent.com/21034990/222950631-3ffa2a60-1bbd-4a43-aefa-ef73e90763fd.png)
 
+### Compute precision and recall
+precision = 0.9506578947368421, recall = 0.9444444444444444
 
+![image](https://user-images.githubusercontent.com/21034990/223034826-dbf6b74c-02f5-4d41-9788-0acff7797c2f.png)
 
