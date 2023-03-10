@@ -43,12 +43,24 @@ class Association:
         N = len(track_list) # N tracks
         M = len(meas_list) # M measurements
         
+        '''
         self.unassigned_tracks = list(range(N))
         self.unassigned_meas = list(range(M))
 
         # initialize association matrix
         self.association_matrix = np.inf*np.ones((N,M)) 
-       
+        '''
+        
+        self.association_matrix = np.matrix([])  # reset matrix
+        self.unassigned_tracks = []  # reset lists
+        self.unassigned_meas = []
+        if len(meas_list) > 0:
+            self.unassigned_meas = list(range(M))
+        if len(track_list) > 0:
+            self.unassigned_tracks = list(range(N))
+        if len(meas_list) > 0 and len(track_list) > 0:
+            self.association_matrix = np.asmatrix(np.inf * np.ones((N, M)))
+            
         for i in range(N): 
             track = track_list[i]
             for j in range(M):
