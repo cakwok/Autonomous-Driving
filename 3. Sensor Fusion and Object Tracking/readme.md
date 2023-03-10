@@ -8,7 +8,17 @@ In this task, a 6D F matrix to used predict positions and velocities in xyz dime
 <img src="https://user-images.githubusercontent.com/21034990/224194307-fc91fc2b-f912-4cf7-ace7-0598c21ce95b.png" width=500><img src="https://user-images.githubusercontent.com/21034990/224194319-0115dbda-dab3-4eb8-a487-05a1a322700a.png" width=500>
 
 ## Track Management
-<img width="450" alt="image" src="https://user-images.githubusercontent.com/21034990/224194171-a4891c20-ff05-4e7b-862e-53c316ba9d80.png"><img width="450" alt="image" src="https://user-images.githubusercontent.com/21034990/224194042-d1b076ef-21ac-474b-a6e3-7c8133ebbb98.png">
+In real world scenario, we usually have multiple objects in the vehicles environment and we also receive multiple measurements at each time stamp.
+
+Track management is about initalization of new tracks, deletion of old tracks, and assignment of confidence value to a track.
+
+In this task, I have initialized a track by transforming a measurement from sensor to vehicle coorinates.  Then to keep track of unassigned tracks over a window size. 
+
+If a track is in confirmed state but has fallen below a threshold, the track would be deleted.  Alternatively, we can remove initialized and tentative tracks if their noise covariance has exceeded a certain values, since the uncertainly is large enough to be discarded.
+
+Otherwise, a confirmed track would be increased in track score so we would have a confidence level of a track.
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/21034990/224194171-a4891c20-ff05-4e7b-862e-53c316ba9d80.png"><img width="500" alt="image" src="https://user-images.githubusercontent.com/21034990/224194042-d1b076ef-21ac-474b-a6e3-7c8133ebbb98.png">
 
 ## Data Association
 <img width="1245" alt="image" src="https://user-images.githubusercontent.com/21034990/224204659-7fae6e5b-d2ed-4f4f-a085-ab1eadb3ba67.png"> 
