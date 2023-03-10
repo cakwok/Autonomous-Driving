@@ -27,8 +27,8 @@ We have established tracks after the prior step.  In this step, we calculated th
 
 ## Sensor Fusion
 To ensure accurate track management in autonomous vehicles, it is essential to consider the visibility of an object across multiple sensors. Therefore, we have implemented a method that checks if an object falls within a sensor's field of view before executing track management. This ensures that only valid objects are considered for further processing, while objects outside of the sensors' range are ignored, and their track score remains unchanged.
-<img width="1267" alt="image" src="https://user-images.githubusercontent.com/21034990/224209913-a021082c-4f3c-426b-bd82-919e6eebcd16.png">
-<img width="1264" alt="image" src="https://user-images.githubusercontent.com/21034990/224209865-08542e88-9e68-4498-bfa3-d57359c1240a.png">
+<img width="1226" alt="image" src="https://user-images.githubusercontent.com/21034990/224415317-ff6c85e9-e22b-4e23-ac33-1ac59516805f.png">
+<img width="1247" alt="image" src="https://user-images.githubusercontent.com/21034990/224415171-9a0c5523-3a91-4fe4-bd13-27fcb21301f6.png">
 <a href="https://youtu.be/uiIsP0S6V5Y">Link to video</a>
 
 ## Summary
