@@ -33,5 +33,6 @@ Since there are multiple sensors in an autonomous vehicle, the track management 
 
 ## Summary
 - The most difficult part for me to complete is the general workflow to understand the holistic meaning of the pipelines and also to understand the given codes.  Otherwise I think the teaching materials are clear to explain each individual concept.
-- Yes I have seen improvement of the MSE plotting over time between part 2 LiDAR only and the last part with fusion.  The mean of MSE has dropped from 0.78 to 0.18.  It is within my expectation, as more dataset provided, the higher accuracy should a model to be achieved.
-- 
+- Yes I have seen improvement of the MSE plotting over time between part 2 LiDAR only and the last part with fusion.  The mean of MSE has dropped from 0.78 to 0.18.  It works as my expectation, as more dataset provided, the higher accuracy should a model to be achieved.
+- A sensor fusion system is designed to integrate data from multiple sensors to improve the accuracy and reliability of measurements and help in making more informed decisions. However, there are several challenges that sensor fusion systems can face in real-life scenarios, sensor diversity, sensor calibration, fusion algorithms and environmental conditions.  The challenge I have seen in this project is about higher computation requirement and complexity of fusion algorithms.
+- To improve tracking results in the future, possible strategies could be incorportion of multi modal informations, such as weather conditions and map data.
