@@ -36,3 +36,18 @@ To ensure accurate track management in autonomous vehicles, it is essential to c
 - Yes I have seen improvement of the MSE plotting over time between part 2 LiDAR only and the last part with fusion.  The mean of MSE has dropped from 0.78 to 0.18.  It works as my expectation, as more dataset provided, the higher accuracy should a model to be achieved.
 - A sensor fusion system is designed to integrate data from multiple sensors to improve the accuracy and reliability of measurements and help in making more informed decisions. However, there are several challenges that sensor fusion systems can face in real-life scenarios, sensor diversity, sensor calibration, fusion algorithms and environmental conditions.  The challenge I have seen in this project is about higher computation requirement and complexity of fusion algorithms.
 - To improve tracking results in the future, possible strategies could be incorportion of multi modal informations, such as weather conditions and map data.
+
+## Instruction to run the codes
+loop_over_dataset.py is the main file for the lidar detection and tracking loop, which processes each measurement frame.
+```
+python loop_over_dataset.py
+```
+filter.py contains the EKF class including predict and update step.
+
+trackmanagement.py includes classes to track attributes for state and covariancem, store and manage all tracks. 
+
+association.py associates tracks to measurements and call EKF update.
+
+measurements.py includes classes for senor measurement handling, field of view, coordiante transforms and EKF mesurement model. 
+
+params.py includes all parameters for tracking. for example the timestep, initialization parameters, track management settings, gating threshold. 
