@@ -38,7 +38,7 @@ To ensure accurate track management in autonomous vehicles, it is essential to c
 - To improve tracking results in the future, possible strategies could be incorportion of multi modal informations, such as weather conditions and map data.
 
 ## Instruction to run the codes
-loop_over_dataset.py is the main file for the lidar detection and tracking loop, which processes each measurement frame.
+loop_over_dataset.py is the main file for the lidar detection and tracking loop, which processes each measurement frame for extended Kalman Filter, track management, data association, measurement and parameters definition.
 ```
 python loop_over_dataset.py
 ```
