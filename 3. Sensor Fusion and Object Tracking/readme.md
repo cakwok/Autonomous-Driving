@@ -12,11 +12,11 @@ In real world scenario, we usually have multiple objects in the vehicles environ
 
 Track management is about initalization of new tracks, deletion of old tracks, and assignment of confidence value to a track.
 
-In this task, I have initialized a track by transforming a measurement from sensor to vehicle coorinates.  Then to keep track of unassigned tracks over a window size. 
+In this task, I have initialized a track by transforming a measurement from sensor to vehicle coorinates.  Then keep track of unassigned tracks over a window size. 
 
-If a track is in confirmed state but has fallen below a threshold, the track would be deleted.  Alternatively, we can remove initialized and tentative tracks if their noise covariance has exceeded a certain values, since the uncertainly is large enough to be discarded.
+If a track is in confirmed state but has fallen below a threshold, the track would be deleted.  Initialized and tentative tracks, on the other hand, since we don't have enough track score to reference, we can refer to their noise covariance instead.  Shall the uncertainty exceed a certain values, the track could be be discarded.
 
-Otherwise, a confirmed track would be increased in track score so we would have a confidence level of a track.
+Otherwise, a confirmed track would be increased in track score so we would have a confidence level.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/21034990/224194171-a4891c20-ff05-4e7b-862e-53c316ba9d80.png"><img width="500" alt="image" src="https://user-images.githubusercontent.com/21034990/224194042-d1b076ef-21ac-474b-a6e3-7c8133ebbb98.png">
 
