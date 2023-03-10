@@ -30,3 +30,8 @@ Since there are multiple sensors in an autonomous vehicle, the track management 
 <img width="1267" alt="image" src="https://user-images.githubusercontent.com/21034990/224209913-a021082c-4f3c-426b-bd82-919e6eebcd16.png">
 <img width="1264" alt="image" src="https://user-images.githubusercontent.com/21034990/224209865-08542e88-9e68-4498-bfa3-d57359c1240a.png">
 <a href="https://youtu.be/uiIsP0S6V5Y">Link to video</a>
+
+## Summary
+- The most difficult part for me to complete is the general workflow to understand the holistic meaning of the pipelines and also to understand the given codes.  Otherwise I think the teaching materials are clear to explain each individual concept.
+- Yes I have seen improvement of the MSE plotting over time between part 2 LiDAR only and the last part with fusion.  The mean of MSE has dropped from 0.78 to 0.18.  It is within my expectation, as more dataset provided, the higher accuracy should a model to be achieved.
+- 
