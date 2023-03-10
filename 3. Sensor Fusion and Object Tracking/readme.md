@@ -29,7 +29,7 @@ We have established tracks after the prior step.  In this step, we calculated th
 To ensure accurate track management in autonomous vehicles, it is essential to consider the visibility of an object across multiple sensors. Therefore, we have implemented a method that checks if an object falls within a sensor's field of view before executing track management. This ensures that only valid objects are considered for further processing, while objects outside of the sensors' range are ignored, and their track score remains unchanged.
 <img width="1226" alt="image" src="https://user-images.githubusercontent.com/21034990/224415317-ff6c85e9-e22b-4e23-ac33-1ac59516805f.png">
 <img width="1247" alt="image" src="https://user-images.githubusercontent.com/21034990/224415171-9a0c5523-3a91-4fe4-bd13-27fcb21301f6.png">
-<a href="https://youtu.be/uiIsP0S6V5Y">Link to video</a>
+<a href="https://youtu.be/mPngKqnNs9I">Link to video</a>
 
 ## Summary
 - The most difficult part for me to complete is the general workflow to understand the holistic meaning of the pipelines and also to understand the given codes.  Otherwise I think the teaching materials are clear to explain each individual concept.
