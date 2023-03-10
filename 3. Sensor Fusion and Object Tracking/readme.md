@@ -21,9 +21,12 @@ Otherwise, a confirmed track would be increased in track score so we would have 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/21034990/224194171-a4891c20-ff05-4e7b-862e-53c316ba9d80.png"><img width="500" alt="image" src="https://user-images.githubusercontent.com/21034990/224194042-d1b076ef-21ac-474b-a6e3-7c8133ebbb98.png">
 
 ## Data Association
+We have established tracks after the prior step.  In this step, we calculated the Mahalanobis distances for each pair of tracks and measurement, and take the single nearest neighbor data to associate measurements to tracks, and used a gating technique with chi-square-distribution to remove outliners.
 <img width="1245" alt="image" src="https://user-images.githubusercontent.com/21034990/224204659-7fae6e5b-d2ed-4f4f-a085-ab1eadb3ba67.png"> 
 <img width="1238" alt="image" src="https://user-images.githubusercontent.com/21034990/224203648-a8f81344-a9c0-45a0-9897-a44fc99a4f36.png">
 
 ## Sensor Fusion
+Since there are multiple sensors in an autonomous vehicle, the track management needs to consider whether an object is in visible area.  In this scenario, we determined an object exisits if it falls into a sensor's field of view and track management will be executed if valid.  Otherwise, the track score will remain the same.
 <img width="1267" alt="image" src="https://user-images.githubusercontent.com/21034990/224209913-a021082c-4f3c-426b-bd82-919e6eebcd16.png">
 <img width="1264" alt="image" src="https://user-images.githubusercontent.com/21034990/224209865-08542e88-9e68-4498-bfa3-d57359c1240a.png">
+<a href="https://youtu.be/uiIsP0S6V5Y">Link to video</a>
