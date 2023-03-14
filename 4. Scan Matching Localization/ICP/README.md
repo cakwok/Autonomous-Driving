@@ -16,3 +16,7 @@ The lines between blue and green dots show the associated points matched by ICP.
 
 ### NDT
 The creation of NDT involves creating a probability density function from a target point cloud and then using newton's method to find a transform that maximizes the overall summation of source point values within that probability field.  To create the probability density function the grid space is discretized into cells, and each cell has it's own 2D Gaussian from the target cloud's points.   The 2D Gaussian represents the probability of finding a point throughout the cell region and is calculated based on mean and covariance of the points inside the cell.   The cell will be a region from 0 to 10 in both x and y directions
+
+![image](https://user-images.githubusercontent.com/21034990/224888074-979f38d3-f160-4e36-bb3b-3c01adbee5b4.png)
+![image](https://user-images.githubusercontent.com/21034990/224888183-de7868a2-f50e-48d6-bbd3-7cc6c8116257.png)
+
