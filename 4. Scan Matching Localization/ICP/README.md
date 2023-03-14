@@ -9,5 +9,5 @@ After ICP, we are able to estimate the transformations between these 2 LiDAR sca
 <img src="https://user-images.githubusercontent.com/21034990/224862141-7786ff2e-fc79-40a0-8d9c-f06718d10e2b.png" width=300>
 <img src="https://user-images.githubusercontent.com/21034990/224860354-206b992a-625a-4eb8-b3f5-102bf7a50049.png" width=280>
 
-The lines between blue and green dots show the matched points by ICP.<br>
+The lines between blue and green dots show the associated points matched by ICP.<br>
 <img src="https://user-images.githubusercontent.com/21034990/224856271-8f8a0d00-a21d-49e7-8ae8-cd7abdc6b909.png" width=300>
