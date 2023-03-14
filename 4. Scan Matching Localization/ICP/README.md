@@ -21,7 +21,7 @@ The creation of NDT involves creating a probability density function from a targ
 
 ### ICP Alignment
 <img src="https://user-images.githubusercontent.com/21034990/224895071-899c520e-eff8-40b7-91b3-4612519b90ad.png" width=420> <img src="https://user-images.githubusercontent.com/21034990/224895269-b15ca22c-5201-434f-95e7-70fdd5c9228c.png" width=450>
-<img src="https://user-images.githubusercontent.com/21034990/224895243-c28390e9-49ea-4173-97ef-bd98cca708cc.png" width=450>
+<img src="https://user-images.githubusercontent.com/21034990/224895243-c28390e9-49ea-4173-97ef-bd98cca708cc.png" width=500>
 
-<img src="https://user-images.githubusercontent.com/21034990/224895454-2f0aa3e8-4154-445e-8f4c-e42fe8840fe4.png" width=300>
+<img src="https://user-images.githubusercontent.com/21034990/224895454-2f0aa3e8-4154-445e-8f4c-e42fe8840fe4.png" width=400>
 
