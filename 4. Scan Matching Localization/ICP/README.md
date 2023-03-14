@@ -1,6 +1,6 @@
 ## Scan Matching
 
-This project involved the development of a scan matching system using ICP, aided by helper functions from Open PCL libraries. The system enables detection of changes in location and direction, and facilitates the localization of a robot or autonomous system.
+This project involved the development of a scan matching system using ICP from scratch, aided by helper functions from Open PCL libraries. The system enables detection of changes in location and direction, and facilitates the localization of a robot or autonomous system.
 
 The resulting output showcases a map represented by big square with blue dots, depicting the LiDAR signal after the first scan at starting pose(left). After moving by an unknown distance and angle, the next LiDAR scan is represented by red dots. Our goal is to estimate the new location of the robot using the source LiDAR cloud points derived from the red dots.
 
