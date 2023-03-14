@@ -28,10 +28,5 @@ This task compare PCL's ICP and NDP function to align a lidar input scan with a 
 ### ICP and NDP Pose Error
 <img src="https://user-images.githubusercontent.com/21034990/224904519-91641cce-5825-4ad8-9739-939122a9b8cd.png" width=440> <img src="https://user-images.githubusercontent.com/21034990/224904844-71e07752-3afe-4e01-a4bd-4ef9dfda4586.png" width=460> 
 
+<img src="https://user-images.githubusercontent.com/21034990/224901120-6ba0edd2-f2d9-4b49-9d74-e5f5c8b16abe.png" width=450> <img src="https://user-images.githubusercontent.com/21034990/224904797-33a64240-8321-44a0-86e0-ed6dd023d8b0.png" width=450>
 
-<img src="https://user-images.githubusercontent.com/21034990/224901120-6ba0edd2-f2d9-4b49-9d74-e5f5c8b16abe.png" width=500>
-<img src="https://user-images.githubusercontent.com/21034990/224904797-33a64240-8321-44a0-86e0-ed6dd023d8b0.png" width=500>
-
-
-
-The resulting output showcases a map represented by big square with blue dots, depicting the LiDAR signal after the first scan at starting pose(left). After moving by an unknown distance and angle, the next LiDAR scan is represented by red dots. Our goal is to estimate the new location of the robot using the source LiDAR cloud points derived from the red dots.
