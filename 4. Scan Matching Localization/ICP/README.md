@@ -30,3 +30,7 @@ This task compare PCL's ICP and NDP function to align a lidar input scan with a 
 
 <img src="https://user-images.githubusercontent.com/21034990/224901120-6ba0edd2-f2d9-4b49-9d74-e5f5c8b16abe.png" width=450> <img src="https://user-images.githubusercontent.com/21034990/224904797-33a64240-8321-44a0-86e0-ed6dd023d8b0.png" width=450>
 
+### Carla Simulator
+Now with the scan matchings and point cloud alignment, the simulated car could be driving with information given by LiDAR in the Carla simulator. 
+![image](https://user-images.githubusercontent.com/21034990/224914231-576346ca-97b4-4f32-b029-9035bc1f8ece.png)
+
