@@ -1,6 +1,8 @@
 ## Scan Matching
 
-This project involved the development of a scan matching system using ICP from scratch, aided by helper functions from Open PCL libraries. The system enables detection of changes in location and direction, and facilitates the localization of a robot or autonomous system.
+This project involved the development of a scan matching system using 1.)ICP from scratch and 2.NDT, aided by helper functions from Open PCL libraries. The system enables detection of changes in location and direction, and facilitates the localization of a robot or autonomous system.
+
+### ICP
 
 The resulting output showcases a map represented by big square with blue dots, depicting the LiDAR signal after the first scan at starting pose(left). After moving by an unknown distance and angle, the next LiDAR scan is represented by red dots. Our goal is to estimate the new location of the robot using the source LiDAR cloud points derived from the red dots.
 
@@ -11,3 +13,6 @@ After ICP, we are able to estimate the transformations between these 2 LiDAR sca
 
 The lines between blue and green dots show the associated points matched by ICP.<br>
 <img src="https://user-images.githubusercontent.com/21034990/224856271-8f8a0d00-a21d-49e7-8ae8-cd7abdc6b909.png" width=300>
+
+### NDT
+The creation of NDT involves creating a probability density function from a target point cloud and then using newton's method to find a transform that maximizes the overall summation of source point values within that probability field.  To create the probability density function the grid space is discretized into cells, and each cell has it's own 2D Gaussian from the target cloud's points.   The 2D Gaussian represents the probability of finding a point throughout the cell region and is calculated based on mean and covariance of the points inside the cell.   The cell will be a region from 0 to 10 in both x and y directions
