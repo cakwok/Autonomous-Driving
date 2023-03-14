@@ -20,7 +20,7 @@ The creation of NDT involves creating a probability density function from a targ
 <img src="https://user-images.githubusercontent.com/21034990/224888074-979f38d3-f160-4e36-bb3b-3c01adbee5b4.png" width=400 align="top"> <img src="https://user-images.githubusercontent.com/21034990/224888183-de7868a2-f50e-48d6-bbd3-7cc6c8116257.png" width=500>
 
 ### ICP Alignment
-<img src="https://user-images.githubusercontent.com/21034990/224895071-899c520e-eff8-40b7-91b3-4612519b90ad.png" width=500><img src="https://user-images.githubusercontent.com/21034990/224895269-b15ca22c-5201-434f-95e7-70fdd5c9228c.png" width=500>
-<img src="https://user-images.githubusercontent.com/21034990/224895243-c28390e9-49ea-4173-97ef-bd98cca708cc.png" width=500>
+<img src="https://user-images.githubusercontent.com/21034990/224895071-899c520e-eff8-40b7-91b3-4612519b90ad.png" width=400><img src="https://user-images.githubusercontent.com/21034990/224895269-b15ca22c-5201-434f-95e7-70fdd5c9228c.png" width=400>
+<img src="https://user-images.githubusercontent.com/21034990/224895243-c28390e9-49ea-4173-97ef-bd98cca708cc.png" width=400>
 <img src="https://user-images.githubusercontent.com/21034990/224895454-2f0aa3e8-4154-445e-8f4c-e42fe8840fe4.png" width=300>
 
