@@ -11,4 +11,6 @@ By implementing:
 - Path and trajectory generation using cubic spirals
 - Best trajectory selection though a cost function evaluation. This cost function will mainly perform a collision check and a proximity check to bring cost higher as we get closer or collide with objects but maintaining a bias to stay closer to the lane center line.
 
+Below shows the output of the implementation with the Carla simulator -
+
 ![image](https://user-images.githubusercontent.com/21034990/226438848-cde4eada-09f9-498c-a2e8-a2fe0e28d090.png)
