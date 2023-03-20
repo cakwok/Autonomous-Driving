@@ -1,3 +1,5 @@
+## Motion Planning and Decision Making for Autonomous Vehicles
+
 In this project, I have implemented two of the main components of a traditional hierarchical planner: The Behavior Planner and the Motion Planner to:
 
 - Avoid static objects (cars, bicycles and trucks) parked on the side of the road (but still invading the lane). The vehicle must avoid crashing with these vehicles by executing either a “nudge” or a “lane change” maneuver.
