@@ -4,7 +4,7 @@ In the project 5, I have built a path planner for the autonomous vehicle. The ob
 ![image](https://user-images.githubusercontent.com/21034990/227677040-d2c6a13e-592f-4516-ab59-d3f5f6cd2783.png)
 
 #### PID controller for throttle and steer
-Despite in the lecture that PID controller accounts for controlling steering angle, the methodology applies to all control problems such as throttling.  The error function in this context is velocity and defined as
+PID controller solves control problems by getting input from systems, regulating controls error functions with smoothering  rate of change of error and cater accounts for controlling steering angle, the methodology applies to all control problems such as throttling.  The error function in this context is velocity and defined as
 
 ```
 error_throttle = actual speed - desired speed
