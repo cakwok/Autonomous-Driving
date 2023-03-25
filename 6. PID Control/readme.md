@@ -5,4 +5,8 @@ Coordinate accent is one of the key take-away from this module.  The objective i
 The algorithm iterate each parameter (P, I, D) while the sum of probing is larger than a tolerance.  In each iteration, the parameter would be increased with or decreased by a small value, check if a better error until it is no longer moving.  Then the parameter value would be updated accordingly.
 
 #### Project Summary
-The goal is to design a PID controller to perform vehicle trajectory tracking and simulate on the CARLA simulator.
+In the previous project I have built a path planner for the autonomous vehicle. The objective in this project is to build the steer and throttle controller using PID controller, so that the car follows the trajectory.   The result is simulater with the CARLA simulator.
+
+
+
+
