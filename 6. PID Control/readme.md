@@ -68,5 +68,6 @@ su - student // Will say permission denied, ignore and continue
 cd /opt/carla-simulator/
 SDL_VIDEODRIVER=offscreen ./CarlaUE4.sh -opengl
 ```
-main.cpp - main code
+#### Repository Structure
+main.cpp - main code<br>
 pid_controller.cpp - Code to return PID objects, update and compute total errors
