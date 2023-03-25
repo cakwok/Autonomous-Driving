@@ -21,9 +21,12 @@ error_steer = actual steer angle - desired angle
 ```
 
 #### Evaluate PID efficiency
+Despite we have talked about coordinate ascent, in this project, static parameters was used, and the efficiency is plotted as below.
+
+```
 pid_steer.Init(0.5, 0.005, 0.3, 1.2, -1.2);
 pid_throttle.Init(0.20,0.001,0.02, 1, -1);
-
+```
 ![image](https://user-images.githubusercontent.com/21034990/227737543-80fca415-8a48-46ef-8839-8a3e2d92baf8.png)
 ![image](https://user-images.githubusercontent.com/21034990/227737557-dbc24f11-c2ab-4f57-a3d1-33923c19a320.png)
 ![image](https://user-images.githubusercontent.com/21034990/227737609-225bdebd-04e8-430b-826d-d843037bf1c7.png)
