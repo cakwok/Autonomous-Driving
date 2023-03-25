@@ -1,10 +1,4 @@
-#### Coordinate Ascent
-
-Coordinate ascent is one of the key take-away from this module.  The objective is to locate the optimal control gain parameters - P, I, D for PID control.
-
-The algorithm iterates each parameter while the sum of delta changes of these parameters is no smaller than the tolerance.  In each iteration, the parameters would be increased with or decreased by a small value, check if there exists a better error until it is no longer moving.   
-
-#### PID Control Project Summary
+#### PID Control Project
 In the previous project I have built a path planner for the autonomous vehicle. The objective in this project is to build the steer and throttle controller using PID controller, so that the simulated vehicle follows the trajectory.   The result is simulated with the CARLA simulator.
 
 ![image](https://user-images.githubusercontent.com/21034990/227677040-d2c6a13e-592f-4516-ab59-d3f5f6cd2783.png)
@@ -37,5 +31,13 @@ The oscillating pattern looks matching with the simulated behavior.  The PID con
 
 Likewise for the second plot to evaluate throttling.  In general, the PID controller output matches the trend of error throttle, but since at the beginning of the simulation, the vehicle just started acceleration, which created an outliner at the beginning of the plot.
 
-(raw data of the plots)
+(raw data of the plots)<br>
 ![image](https://user-images.githubusercontent.com/21034990/227737609-225bdebd-04e8-430b-826d-d843037bf1c7.png)
+
+#### Coordinate Ascent
+
+In contrast to implement static PID parameters we have been experimenting in the above tasks, Coordinate ascent alogrithm is an automatic way to locate optimal control gain parameters.
+
+The algorithm iterates each parameter while the sum of delta changes of these parameters is no smaller than the tolerance.  In each iteration, the parameters would be increased with or decreased by a small value, check if there exists a better error until it is no longer moving.   
+
+PID controllers are model-free, meaning that they do not rely on a mathematical model of the system being controlled to adjust their parameters. Instead, they use feedback from the system itself to adjust their output in real-time. It is relatively simple to implement, adoptable to different usage and systems, but because of this generalization in nature, we may not be able to optimize the best in specific systems.
