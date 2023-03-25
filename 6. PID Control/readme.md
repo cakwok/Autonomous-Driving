@@ -4,7 +4,7 @@ The objective in this project is to develop steer and throttle controller by PID
 ![image](https://user-images.githubusercontent.com/21034990/227677040-d2c6a13e-592f-4516-ab59-d3f5f6cd2783.png)
 
 #### PID controller for throttle and steer
-PID controller is a control loop feedback system to regulate a processes.   It calculates error functions between the desired and actual variables, and regulates the output by weighting with a proportional factor of the error, accumlated error over time, and rate of change of the errors.
+PID (proportional–integral–derivative) controller is a control loop feedback system to regulate a processes.   It calculates error functions between the desired and actual variables, and regulates the output by weighting a proportional factor of the error(proportional), accumlated error over time(integral), and rate of change of the errors(derivative).
 
 The error function of throttle is about the vehicle velocity which is defined as
 
@@ -49,7 +49,7 @@ In contrast to implement static PID parameters we have been experimenting in the
 
 The algorithm iterates each parameter while the sum of delta changes of these parameters is no smaller than the tolerance.  In each iteration, the parameters would be increased with or decreased by a small value, check if there exists a better error until it is no longer moving.   
 
-PID controllers are model-free, meaning that they do not rely on a mathematical model of the system being controlled to adjust their parameters. Instead, they use feedback from the system itself to adjust their output in real-time. It is relatively simple to implement, adoptable to different usage and systems, but because of this generalization in nature, we may not be able to optimize the best in specific systems.
+PID controllers are model-free, meaning that they do not rely on a mathematical model of the system being controlled to adjust their parameters. Instead, they use feedback from the system itself to adjust their output in real-time. It is relatively simple to implement, adoptable to different usage and systems, but because of this generalization in nature, we may not be able to optimize the best in specific systems, and tuning could be difficult.
 
 #### Running the controller
 ```
@@ -68,3 +68,5 @@ su - student // Will say permission denied, ignore and continue
 cd /opt/carla-simulator/
 SDL_VIDEODRIVER=offscreen ./CarlaUE4.sh -opengl
 ```
+main.cpp - main code
+pid_controller.cpp - Code to return PID objects, update and compute total errors
