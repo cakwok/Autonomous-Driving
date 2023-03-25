@@ -1,26 +1,33 @@
 ### PID Control Project
-In the project 5, I have built a path planner for the autonomous vehicle. The objective in this project is to build the steer and throttle controller using PID controller, so that the simulated vehicle follows the trajectory with the competence steering away from other vehciles.   The result is simulated with the CARLA simulator.
+The objective in this project is to develop steer and throttle controller by PID controller, to enable autonomous vehicles to natvate a given trajectory while avoiding collisions with other vehciles.   The result is simulated with CARLA.
 
 ![image](https://user-images.githubusercontent.com/21034990/227677040-d2c6a13e-592f-4516-ab59-d3f5f6cd2783.png)
 
 #### PID controller for throttle and steer
-PID controller solves control problems by getting input from systems, regulating controls error functions with smoothering  rate of change of error and cater accounts for controlling steering angle, the methodology applies to all control problems such as throttling.  The error function in this context is velocity and defined as
+PID controller is a control loop feedback system to regulate a processes.   It calculates error functions between the desired and actual variables, and regulates the output by weighting with a proportional factor of the error, accumlated error over time, and rate of change of the errors.
+
+The error function of throttle is about the vehicle velocity which is defined as
 
 ```
 error_throttle = actual speed - desired speed
 ```
-and for steering angle, the error function is defined similarly.  Actual steer angle could be obtained by arc tangent of 2 points, ie atan2(y2-y1, x2-x1).
+
+and the error function for steering angle is defined similarly as 
 ```
 error_steer = actual steer angle - desired angle
 ```
+and the actual steer angle could be obtained by arc tangent of 2 points, ie atan2(y2-y1, x2-x1).
 
 #### Evaluate PID efficiency
-Despite we have talked about coordinate ascent, in this project, static parameters was used, and the efficiency is plotted as below.   
+In this project, the PID controllers are implemented with static PID parameters and initiated as 
 
 ```
 pid_steer.Init(0.5, 0.005, 0.3, 1.2, -1.2);
 pid_throttle.Init(0.20,0.001,0.02, 1, -1);
 ```
+
+The corresponding efficiency is plotted as below.  
+
 ![image](https://user-images.githubusercontent.com/21034990/227737543-80fca415-8a48-46ef-8839-8a3e2d92baf8.png)![image](https://user-images.githubusercontent.com/21034990/227737557-dbc24f11-c2ab-4f57-a3d1-33923c19a320.png)
 
 Observed from the Carla simulation, the vehicle has successfully steer away from objects on the road, however the tragetory path is not smooth;  the vehicle steer itself even there is no vehicle ahead.
