@@ -29,7 +29,13 @@ pid_throttle.Init(0.20,0.001,0.02, 1, -1);
 ```
 ![image](https://user-images.githubusercontent.com/21034990/227737543-80fca415-8a48-46ef-8839-8a3e2d92baf8.png)![image](https://user-images.githubusercontent.com/21034990/227737557-dbc24f11-c2ab-4f57-a3d1-33923c19a320.png)
 
-Observed from the Carla simulation, the simulated vehicle has successfully steer away from objects on the road, despite the tragetory path is not smooth;  the vehicle steer itself even there are no vehicles ahead.
+Observed from the Carla simulation, the vehicle has successfully steer away from objects on the road, however the tragetory path is not smooth;  the vehicle steer itself even there is no vehicle ahead.
 
-From the plot below, it seems matching the observed behavior.  The error steering keeps on oscillating between -1.2 to 1.2.
+From the plot below, "error steer" represents the discrepancy between actual and desired angle.  "steering output" represents PID controller output, being regulated between the range 1.2 to -1.2.   
+
+The oscillating pattern looks matching with the simulated behavior.  The PID controller has in fact smoothed out the flunctation of the erros and in syncrhonization with the error steer.  Therefore, the oscillating outcome might be caused by the planner itself.
+
+Likewise for the second plot to evaluate throttling.  In general, the PID controller output matches the trend of error throttle, but since at the beginning of the simulation, the vehicle just started acceleration, which created an outliner at the beginning of the plot.
+
+(raw data of the plots)
 ![image](https://user-images.githubusercontent.com/21034990/227737609-225bdebd-04e8-430b-826d-d843037bf1c7.png)
