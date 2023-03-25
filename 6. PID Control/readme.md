@@ -9,13 +9,18 @@ In the previous project I have built a path planner for the autonomous vehicle. 
 
 ![image](https://user-images.githubusercontent.com/21034990/227677040-d2c6a13e-592f-4516-ab59-d3f5f6cd2783.png)
 
-#### PID controller for throttle
+#### PID controller for throttle and steer
 Despite in the lecture that PID controller accounts for controlling steering angle, the methodology applies to all control problems such as throttling.  The error function in this context is velocity and defined as
 
 ```
 error_throttle = actual speed - desired speed
 ```
+and for steering angle
+```
+error_steer = actual steer angle - desired angle
+```
 
+#### Evaluate PID efficiency
 ![image](https://user-images.githubusercontent.com/21034990/227737543-80fca415-8a48-46ef-8839-8a3e2d92baf8.png)
 ![image](https://user-images.githubusercontent.com/21034990/227737557-dbc24f11-c2ab-4f57-a3d1-33923c19a320.png)
 ![image](https://user-images.githubusercontent.com/21034990/227737609-225bdebd-04e8-430b-826d-d843037bf1c7.png)
