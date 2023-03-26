@@ -1,0 +1,5 @@
+source /data/virtual_envs/sdc-c1-cpu/bin/activate
+
+PYTHONPATH=/data/virtual_envs/sdc-c1-cpu/lib/python3.7/site-packages:$PYTHONPATH
+
+LD_LIBRARY_PATH=/opt/miniconda3/envs/sdc-c1-cuda/lib:$LD_LIBRARY_PATH

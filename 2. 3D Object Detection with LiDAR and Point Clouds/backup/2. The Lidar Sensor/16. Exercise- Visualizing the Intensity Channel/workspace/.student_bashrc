@@ -1,0 +1,9 @@
+ln -s /data/waymo/* /home/workspace/dataset/
+
+source /data/virtual_envs/sdc-c2/bin/activate
+
+PYTHONPATH=/data/virtual_envs/sdc-c2/lib/python3.7/site-packages:$PYTHONPATH
+
+cd /home/workspace
+
+clear
