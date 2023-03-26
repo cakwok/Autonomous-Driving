@@ -1,3 +1,5 @@
+## Project Overview
+
 The main objective of this project is to develop a fusion system that combines camera and LiDAR to track multiple objects like vehicles and pedestrians in urban scenes.  This combines the techiques of applying extended Kalman Filters for non-linear measurement, and multiple object tracking using Mahalanobis distances to associate each pair of tracks and measurement.
 
 ## Tracking
