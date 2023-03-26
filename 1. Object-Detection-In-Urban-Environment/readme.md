@@ -1,37 +1,6 @@
 ### Project overview:
 The objective of this project is to build a pederstrians, vechicles, object regressing model for autonomous driving systems to understand urban scenes and road conditions.   Object detection is an critical component in self-driving car systems to make precise steering decision to ensure road safety.  Single Shot Detection (SSD) is implemented in this project to regress for estimated bounding box and class label.  
 
-### Set up: 
-This section contains a brief description of the steps to follow to run the code for this repository.
-
-Start by analyzing the dataset by looking into the data structure of each frame in the video sequence. The result is showed at "Exploratory Data Analysis.ipynb" by running the display_instances() function.  
-
-Prepare the setup by loading a pretrained SSD network by the Tf Object Detection API.
-
-```
-python edit_config.py --train_dir /home/workspace/data/train/ --eval_dir /home/workspace/data/val/ --batch_size 2 --checkpoint /home/workspace/experiments/pretrained_model/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0 --label_map /home/workspace/experiments/label_map.pbtxt
-```
-
-Train the network using the pipeline_new.config file.  The file defines training parameters such as image augumentation, learning rate, etc.
-```
-python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config
-```
-
-Monitor prediction performances by exporting event files into TensorBoard
-```
-python -m tensorboard.main --logdir experiments/reference/
-```
-
-Evalute inference performance by loading the validation dataset, and peform detection by the learnt weight.
-
-```
-python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config --checkpoint_dir=experiments/reference/
-```
-
-Fine tune the network with data augmentations and hyperparameters experiments.  The effect of data augmentations could be viewed from "Explore augmentations Grayscale.ipynb"
-
-There is no new requirements.txt file or a Dockerfile, as the project is run in the Udacity provided workspace.
-
 ### Dataset
 #### Dataset Analysis
 Waymo Open Dataset is composed of real world autonomous driving images and LiDAR readings collected by Waymo in cities such as San Francisco.  In this project, we would be looking into the real time images collected as the training dataset to analysis road conditions, identify vechicles, pedestrians, cyclists, etc.
@@ -82,4 +51,35 @@ Samples of new data augmentation - random RGB to gray, random adjust contrast<br
 ### Prediction
 Since the video file is too large to be uploaded to github, a snapshot is to taken to demonstrate the prediction.<br>
 ![image](https://user-images.githubusercontent.com/21034990/222093132-fd0936fb-5a15-413a-a5fc-0e6fb77d3087.png)
+
+### Set up: 
+This section contains a brief description of the steps to follow to run the code for this repository.
+
+Start by analyzing the dataset by looking into the data structure of each frame in the video sequence. The result is showed at "Exploratory Data Analysis.ipynb" by running the display_instances() function.  
+
+Prepare the setup by loading a pretrained SSD network by the Tf Object Detection API.
+
+```
+python edit_config.py --train_dir /home/workspace/data/train/ --eval_dir /home/workspace/data/val/ --batch_size 2 --checkpoint /home/workspace/experiments/pretrained_model/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0 --label_map /home/workspace/experiments/label_map.pbtxt
+```
+
+Train the network using the pipeline_new.config file.  The file defines training parameters such as image augumentation, learning rate, etc.
+```
+python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config
+```
+
+Monitor prediction performances by exporting event files into TensorBoard
+```
+python -m tensorboard.main --logdir experiments/reference/
+```
+
+Evalute inference performance by loading the validation dataset, and peform detection by the learnt weight.
+
+```
+python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config --checkpoint_dir=experiments/reference/
+```
+
+Fine tune the network with data augmentations and hyperparameters experiments.  The effect of data augmentations could be viewed from "Explore augmentations Grayscale.ipynb"
+
+There is no new requirements.txt file or a Dockerfile, as the project is run in the Udacity provided workspace.
 
