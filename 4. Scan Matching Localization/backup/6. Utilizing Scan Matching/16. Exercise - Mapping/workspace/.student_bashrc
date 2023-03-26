@@ -1,0 +1,13 @@
+export PATH=/opt/ros/kinetic/bin:/usr/local/cuda-9.0/bin:/opt/pytorch/bin:/opt/utils/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/VirtualGL/bin:/opt/TurboVNC/bin:/opt/swift/swift-4.0.3-RELEASE-ubuntu16.04/usr/bin
+
+source /opt/carndcapstone/venv/bin/activate
+
+export LD_LIBRARY_PATH=/opt/carndcapstone/cuda-8.0/extras/CUPTI/lib64/:/opt/carndcapstone/cuda-8.0/lib64/:/opt/ros/kinetic/lib
+
+export CUDA_HOME=/opt/carndcapstone/cuda-8.0
+
+ln -sf /home/workspace/simulator.desktop /root/Desktop/simulator.desktop
+
+alias pip='python -m pip'
+
+cd /home/workspace
