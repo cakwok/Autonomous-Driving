@@ -2,8 +2,8 @@
 The objective of this project is to build a pederstrians, vechicles, object regressing model for autonomous driving systems to understand urban scenes and road conditions.   Object detection is an critical component in self-driving car systems to make precise steering decision to ensure road safety.  Single Shot Detection (SSD) is implemented in this project to regress for estimated bounding box and class label.  
 
 ### Dataset
-#### Dataset Analysis
-Waymo Open Dataset is composed of real world autonomous driving images and LiDAR readings collected by Waymo in cities such as San Francisco.  In this project, we would be looking into the real time images collected as the training dataset to analysis road conditions, identify vechicles, pedestrians, cyclists, etc.
+#### Explanatory Dataset Analysis
+Waymo Open Dataset is composed of real world autonomous driving images and LiDAR readings collected by Waymo in cities such as San Francisco.  The first task is to look into the real time images collected in the training dataset to analysis road conditions, identify vechicles, pedestrians, cyclists, etc.
 
 The dataset is formatted as TFRrecords. TFRrecords a binary format structure, created by protocol buffer for serialization and communication across platforms and language libraries by protocol messages, which is defined by .proto files.
 
