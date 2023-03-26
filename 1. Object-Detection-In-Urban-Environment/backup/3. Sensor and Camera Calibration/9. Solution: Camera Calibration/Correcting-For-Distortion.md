@@ -1,7 +1,7 @@
 
 ## Correcting For Distortion
 
-![Distorted and Undistorted Images](orig-and-undist.png)
+![image](https://user-images.githubusercontent.com/21034990/227750777-9857ad22-da39-4eb3-9fc6-61853e2ec577.png)
 
 Here, you'll get a chance to try camera calibration and distortion correction for yourself!  
 
